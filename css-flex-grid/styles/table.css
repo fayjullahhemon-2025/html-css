@@ -1,0 +1,20 @@
+table{
+    border-collapse:collapse;
+    
+}
+th,td{
+   
+   border:1px solid black;
+   font-size: larger;
+   padding: 3px 10px;
+}
+th{
+    background-color: antiquewhite;
+}
+caption{
+    font-size: large;
+}
+tfoot tr td{
+    font-size: small;
+    text-align: right;
+}
