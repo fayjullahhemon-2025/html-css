@@ -11,7 +11,7 @@ let brb = 'Jasmin'; //bad example
 // const let = 39;
 //console.log(let); //SyntaxError: let is disallowed as a lexically bound name
 // 2. has to be in one word . cn nt contain any space or gap 
-const her phone number = 43432;
+// const her phone number = 43432;
 const her_phone_number = 43432; //snake case
 const herPhoneNumber = 43432; //camel case usually this one we use
 const HerPhoneNumber = 43432; //pascal case
