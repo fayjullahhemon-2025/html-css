@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.blog {
+    background-color: aquamarine;
+    width: 400px;
+    margin: 50px;
+    box-shadow: 20px 20px 10px burlywood;
+    /* x axis borabor 20px y axis boraboor 20px 10px choracche */
+
+}
+
+#header {
+    background-color: #9fecc6;
+    height: 1200px;
+    background-image: url("../images/Maccho.png");
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-position: center; */
+    /* background-position: bottom center; */
+    /* background-position: top center; */
+    /* background-position: left center; */
+    /* background-position: right center; */
+    /* background-position: bottom right; */
+    /* background-position: top right; */
+    /* background-position: left; */
+    /* background-position: bottom left; */
+
+}

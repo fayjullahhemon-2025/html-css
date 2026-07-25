@@ -53,4 +53,3 @@ greetings();// print nothing, since the return value is not save anywehre
 console.log(greetings());//Hello
 console.log(greetings);//[Function: greetings]
 console.log(typeof greetings());//String
-

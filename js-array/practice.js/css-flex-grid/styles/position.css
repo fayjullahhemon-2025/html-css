@@ -1,12 +1,11 @@
 .container{
-    position:relative; 
+    /* position:relative;  */
     display:flex;
     height:500px;
     border:1px solid red;
     /* width:300%;
     overflow-x:auto;
     white-space: nowrap; */
-    /* width: 100vw; */
 }
 .box{
     width:100px;
@@ -18,7 +17,6 @@
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-
 }
 .box1{
     background-color: goldenrod;
@@ -42,10 +40,7 @@
 }
 .box5{
     background-color: mediumslateblue;
-    position:absolute;
-    bottom:0;
-    right:0;
-    /* margin-right: 100px;
-    margin-left: auto; */
-    /* display: none; */
+    position:sticky;
+    top:0;
+    /* left:300px; */
 }

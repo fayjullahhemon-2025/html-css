@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 2rem;
+            height: 500px;
+            
+
+        }
+
+        .card1 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            /* border: 1px solid red; */
+            padding: 3px 10px;
+            border-radius: 5px;
+            gap: 30px;
+            box-shadow: 0px 5px 20px rgb(199, 230, 231);
+            height: 350px;
+            background-color: #fff;
+        }
+
+        .card1 h3 {
+            color: #37393d;
+        }
+
+        .price h1 {
+            color: #d23197;
+        }
+
+        .price h1 span {
+            font-size: small;
+            color: rgb(140, 141, 142);
+        }
+
+        .card1 p {
+            color: rgb(140, 141, 142);
+        }
+
+        .card1 button {
+            background-color: #d23197;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: medium;
+        }
+
+        .card1 ul {
+            padding-left: 10px;
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: #d23197;
+        }
+
+
+        .card1 ul li {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 5px;
+            color: rgb(47, 49, 50);
+            margin-bottom: 10px;
+        }
+
+        .card1 .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* card2  */
+        .card2 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: 1px solid rgb(98, 77, 227);
+            padding: 3px 10px;
+            border-radius: 5px;
+            gap: 30px;
+            box-shadow: 0px 5px 20px rgb(199, 230, 231);
+            height: 350px;
+            background-color: #fff;
+        }
+
+        .card2 h3 {
+            color: #37393d;
+        }
+
+        .card2 .price h1 {
+            color: rgb(98, 77, 227);
+        }
+
+        .card2 .price h1 span {
+            font-size: small;
+            color: rgb(140, 141, 142);
+        }
+
+        .card2 p {
+            color: rgb(140, 141, 142);
+        }
+
+        .card2 button {
+            background-color: rgb(98, 77, 227);
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: medium;
+        }
+
+        .card2 ul {
+            padding-left: 10px;
+        }
+
+        .circle2 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(98, 77, 227);
+        }
+
+
+        .card2 ul li {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 5px;
+            color: rgb(47, 49, 50);
+            margin-bottom: 10px;
+        }
+
+        .card2 .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* card3  */
+        .card3 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            /* border: 1px solid red; */
+            padding: 3px 10px;
+            border-radius: 5px;
+            gap: 30px;
+            box-shadow: 0px 5px 20px rgb(199, 230, 231);
+            height: 350px;
+            background-color: #fff;
+        }
+
+        .card3 h3 {
+            color: #37393d;
+        }
+
+        .card3 .price h1 {
+            color: rgb(26, 29, 30);
+        }
+
+        .card3 .price h1 span {
+            font-size: small;
+            color: rgb(140, 141, 142);
+        }
+
+        .card3 p {
+            color: rgb(140, 141, 142);
+        }
+
+        .card3 button {
+            background-color: rgb(26, 29, 30);
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: medium;
+        }
+
+        .card3 ul {
+            padding-left: 10px;
+        }
+
+        .circle3 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(26, 29, 30);
+        }
+
+
+        .card3 ul li {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 5px;
+            color: rgb(26, 29, 30);
+            margin-bottom: 10px;
+        }
+
+        .card3 .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .popular-card {
+            width: 300px;
+            
+            position: absolute;
+            top:-25px;
+            z-index:-10;
+            
+        }
+
+        .popular-card span {
+            background-color: rgb(98, 77, 227);
+            border-radius: 5px;
+            color: #fff;
+            padding: 5px;
+            display:inline-block;
+            height: 100px;
+        }
+        .popular-section{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card1">
+            <div class="intro">
+                <h3>Essential</h3>
+                <div class="price">
+                    <h1>$69 <sup><span>/month</span></sup> </h1>
+                </div>
+                <p>The basics for automating your design tokens and assets syncing</p>
+            </div>
+            <button>Start Free Trial</button>
+            <ul>
+                <li>
+                    <div class="circle"></div> <span>1 user</span>
+                </li>
+                <li>
+                    <div class="circle"></div> <span>1 repository</span>
+                </li>
+                <li>
+                    <div class="circle"></div> <span>Unlimited sources</span>
+                </li>
+                <li>
+                    <div class="circle"></div> <span>Unlimited destinations</span>
+                </li>
+            </ul>
+        </div>
+        <div class="popular-section">
+            <div class="popular-card">
+                <span>Most Popular</span>
+            </div>
+            <div class=" card2">
+                <div class="intro">
+                    <h3>Teams</h3>
+                    <div class="price">
+                        <h1>$134 <sup><span>/month</span></sup> </h1>
+                    </div>
+                    <p>Built for teams looking to streamline their workflows</p>
+                </div>
+                <button>Start Free Trial</button>
+                <ul>
+                    <li>
+                        <div class="circle2"></div> <span>4 user</span>
+                    </li>
+                    <li>
+                        <div class="circle2"></div> <span>2 repository</span>
+                    </li>
+                    <li>
+                        <div class="circle2"></div> <span>Unlimited sources</span>
+                    </li>
+                    <li>
+                        <div class="circle2"></div> <span>Unlimited destinations</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="card3">
+            <div class="intro">
+                <h3>Enterprise</h3>
+                <div class="price">
+                    <h1>Let's Talk </h1>
+                </div>
+                <p>For organizations looking for more security and customization</p>
+            </div>
+            <button>Start Free Trial</button>
+            <ul>
+                <li>
+                    <div class="circle3"></div> <span>Unlimited user</span>
+                </li>
+                <li>
+                    <div class="circle3"></div> <span>Unlimited repository</span>
+                </li>
+                <li>
+                    <div class="circle3"></div> <span>SSO</span>
+                </li>
+                <li>
+                    <div class="circle3"></div> <span>CDN</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

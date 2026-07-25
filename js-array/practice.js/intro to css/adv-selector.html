@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* tag selector  */
+        /* tag{} */
+        /* id selector  */
+        /* #id_name{} */
+
+        /* class selector  */
+        /* .class_name{} */
+        ol,
+        ul,
+        p,
+        .heading-2 {
+            /* ekadhik selector er moddhe style add krte gele  */
+            background-color: rgb(243, 228, 97);
+        }
+
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .green {
+            color: green
+        }
+
+        .green.bold {
+            font-size: 1.5rem;
+        }
+
+        article p {
+            color: rgb(231, 42, 168);
+        }
+
+        article {
+            background-color: salmon;
+        }
+
+        article>p {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is a heading</h2>
+    <h2 class="heading-2">This is a heading</h2>
+    <h2>This is a heading</h2>
+    <p>This is a paragraph</p>
+    <article>
+        <h3>This is heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, commodi perspiciatis sapiente provident
+            soluta aliquam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat tempora in reprehenderit! Fugit, ad
+            consequatur!</p>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, optio repellat esse deleniti
+                voluptatum minus.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, optio repellat esse deleniti
+                voluptatum minus.</p>
+        </div>
+    </article>
+    <article>
+        <h3>This is heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, commodi perspiciatis sapiente provident
+            soluta aliquam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat tempora in reprehenderit! Fugit, ad
+            consequatur!</p>
+    </article>
+    <ol>
+        <li>Item 1</li>
+        <li class="red bold">Item 2</li>
+        <li class="bold">Item 3</li>
+        <li class="red">Item 4</li>
+        <li>Item 5</li>
+    </ol>
+    <ul>
+        <li>Item 1</li>
+        <li class="green bold">Item 2</li>
+        <li class="green">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+</html>

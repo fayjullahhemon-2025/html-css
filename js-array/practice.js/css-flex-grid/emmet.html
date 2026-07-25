@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+
+<body>
+    <!-- div>p  -->
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste assumenda debitis culpa quidem quos!
+        </p>
+    </div>
+    <!-- div>article>h3 -->
+    <div>
+        <article>
+            <h3></h3>
+        </article>
+    </div>
+    <!-- div>article*3>h3*3 -->
+    <!-- div>artile*3>h3+p*3  -->
+    <div>
+        <article>
+            <h3>heading1</h3>
+            <p>paragraph1</p>
+            <p>paragraph2</p>
+            <p>paragraph3</p>
+        </article>
+        <article>
+            <h3>heading2</h3>
+            <p>paragraph1</p>
+            <p>paragraph2</p>
+            <p>paragraph3</p>
+        </article>
+        <article>
+            <h3>heading3</h3>
+            <p>paragraph1</p>
+            <p>paragraph2</p>
+            <p>paragraph3</p>
+        </article>
+    </div>
+    <!-- .container>h2 -->
+    <div class="container">
+        <h2>heading1</h2>
+    </div>
+    <!-- .container>h2.heading2 -->
+    <div class="container">
+        <h2 class="heading2">heading2</h2>
+    </div>
+    <!-- .header
+     +main
+     +footer -->
+    <div class="header">header</div>
+    <div class="main">main</div>
+    <div class="footer">footer</div>
+    <ul class="list-container" id="nav">
+        <li class="nav-item">link1</li>
+        <li class="nav-item">link2</li>
+        <li class="nav-item">link3</li>
+        <li class="nav-item">link4</li>
+        <li class="nav-item">link5</li>
+    </ul>
+    <!-- input[type="text"]  -->
+    <input type="text">
+    <!-- ul>li*5>a[href="#"]  -->
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">gallery</a></li>
+    </ul>
+    <!-- ul>li*5{item$}  -->
+    <ul>
+        <li>item 1 </li>
+        <li>item 2 </li>
+        <li>item 3 </li>
+        <li>item 4 </li>
+        <li>item 5 </li>
+    </ul>
+
+    <!-- .container>.box*5{box - $ }  -->
+    <div class="container">
+        <div class="box">box - 1 </div>
+        <div class="box">box - 2 </div>
+        <div class="box">box - 3 </div>
+        <div class="box">box - 4 </div>
+        <div class="box">box - 5 </div>
+    </div>
+</body>
+
+</html>

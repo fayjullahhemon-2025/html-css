@@ -1,0 +1,20 @@
+article {
+    background-color: rgb(207, 180, 207);
+}
+
+h2 {
+    text-align: center;
+}
+
+span {
+    color: chocolate;
+    display: inline-block;
+    border: 1px solid red;
+    width: 250px;
+}
+
+#second {
+    /* display: none; */
+    visibility: hidden;
+
+}

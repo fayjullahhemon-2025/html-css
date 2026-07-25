@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        header{
+            /* background-color: rosybrown; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+        }
+        nav ul{
+            display:flex;
+            gap:20px;
+        }
+        nav ul li{
+            list-style: none;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+            font-size: larger;
+
+        }
+        nav ul li a:hover{
+            color: #92c74e;
+        }
+        body{
+            height: 100vh;
+            background-image: url(images/background.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .logo-text{
+            color:#fff;
+        }
+        .logo-section{
+            width: 20%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap:20px;
+            
+        }
+        .logo{
+            /* border:1px solid red;s */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .logo-text a{
+            text-decoration: none;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <div class="logo">
+            <img src="images/github.png" alt="" width="25px" height="25px">
+        </div>
+        <div class="logo-text">
+            <h3><a href="#">GitHub</a></h3>
+        </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Issues</a></li>
+                <li><a href="#">All Pull Requests</a></li>
+                <li><a href="#">All Repositories</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Codespaces</a></li>
+                <li><a href="#">Copilot</a></li>
+                <li><a href="#">Discussions</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

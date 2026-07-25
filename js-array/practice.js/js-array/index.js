@@ -9,6 +9,3 @@ console.log(player5);
 console.log(players[5]);//undefined
 players[1] = 'ebul';
 console.log(players);
-const numbers = [1,2.3,4,5,6];
-numbers.unshift(4);
-console.log(numbers);
