@@ -14,12 +14,21 @@
 //   2.  Return a new object — { name: employee.name, netSalary: ... }
 
 // Write your code here:
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+function generateSalarySlip(employee) {
+    let netSalary = 0;
+    if (typeof employee['basicSalary'] === 'number' || typeof employee['bonus'] === 'number' || typeof employee['tax'] === 'number') {
+        netSalary = employee['basicSalary'] + employee['bonus'] - employee['tax'];
+    }else{
+        return "invalid";
+    }
+    return {name: employee.name, netSalary};
+}
+const employee = { name:'Karim', basicSalary:30000, bonus:5000, tax:2000 };
+console.log(generateSalarySlip(employee));
+
+
+
 

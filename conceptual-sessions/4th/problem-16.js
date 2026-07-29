@@ -11,12 +11,28 @@
 //   2.  For each character, if it's already a key, increment it — otherwise set it to 1
 
 // Write your code here:
- 
- 
- 
- 
- 
- 
- 
- 
+
+function charFrequency(str){
+    const obj = {};
+    for(const character of str){
+        // obj[character] = (obj[character] || 0)+1;
+        if(obj[character]){ //check kortese object e ei character key ache kina
+            obj[character]++; //paile 1 value baracche
+        }else{
+            obj[character]=1; // na pele 1 kore dicche
+        }
+    }
+    return obj;
+    
+}
+console.log(charFrequency('hero'));
+console.log(charFrequency('hello'));
+// charFrequency('hero');
+
+
+
+
+
+
+
 

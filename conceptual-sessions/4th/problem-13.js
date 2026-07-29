@@ -12,13 +12,33 @@
 
 // Write your code here:
 
-function secondLargest(arr){
-    if(Array.isArray(arr)){
-        // for(const )
+function secondLargest(arr) {
+    let MaxVal = -Infinity;
+    let SecondMaxVal = -Infinity;
+    if (Array.isArray(arr)) {
+        for (const num of arr) {
+            if (typeof num === 'number') {
+                if (num > MaxVal) {
+                    MaxVal = num;
+                } else {
+                    if (num > SecondMaxVal) {
+                        SecondMaxVal = num;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            }else{
+                return "invalid";
+            }
+        }
+        return SecondMaxVal;
     }
 }
 
-
+console.log(secondLargest([45, 12, 89, 3, 67]));
+console.log(secondLargest([45, 12, 89, 3, "67"]));
+console.log(secondLargest([45, 12, 89, 3, "hello"]));
 
 
 

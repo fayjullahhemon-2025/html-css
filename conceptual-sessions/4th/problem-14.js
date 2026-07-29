@@ -11,12 +11,39 @@
 //   2.  Inside the loop, increment result.even or result.odd based on % 2
 
 // Write your code here:
- 
- 
- 
- 
- 
- 
- 
- 
+
+function countEvenOdd(arr){
+    let evenCount = 0;
+    let oddCount = 0;
+    if(Array.isArray(arr)){
+        for(const num of arr){
+            if(typeof num === 'number'){
+                if(num%2===0){
+                    evenCount++;
+                }else{
+                    oddCount++;
+                }
+            }else{
+                return "invalid";
+            }
+        }
+    }else{
+        return "invalid";
+    }
+    return {even: evenCount , odd: oddCount};
+}
+
+console.log(countEvenOdd([1,2,3,4,5]));
+console.log(countEvenOdd([1,2,3,4,"5"]));
+console.log(countEvenOdd(3241));
+console.log(countEvenOdd(true));
+console.log(countEvenOdd(undefined));
+console.log(countEvenOdd(countEvenOdd([1,2,3,4,5])));
+
+
+
+
+
+
+
 
