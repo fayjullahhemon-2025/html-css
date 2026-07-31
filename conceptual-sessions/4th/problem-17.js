@@ -14,12 +14,29 @@
 //   2.  Compare the computed sum to displayedTotal with ===
 
 // Write your code here:
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+function verifyCartTotal(itemPrices, displayedTotal) {
+    let sum = 0;
+    if (Array.isArray(itemPrices) && typeof displayedTotal === 'number') {
+        for (const price of itemPrices) {
+            sum += price;
+        }
+        if (sum === displayedTotal) {
+            return true;
+        } else {
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
+
+console.log(verifyCartTotal([250, 400, 150], 800));
+console.log(verifyCartTotal([250, 400, 150], 750));
+console.log(verifyCartTotal([250, 400, 150], "750"));
+console.log(verifyCartTotal(250,750));
+
 

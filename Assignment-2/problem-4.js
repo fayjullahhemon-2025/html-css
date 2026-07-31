@@ -29,11 +29,40 @@ function topRatedRestaurant(restaurants) {
         return "Invalid";
     }
 }
-console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 }]));
-console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 },{ name: "Pizza Hut", rating: 4.9 }]));
-console.log(topRatedRestaurant([{}, {}]));
-console.log(topRatedRestaurant([{}]));
-console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, {}]));
-console.log(topRatedRestaurant([{ name: "Chillox", rating: NaN }, {},{ name: "Sultan's Dine", rating: 4.8 }]));
-console.log(topRatedRestaurant([]));
+
+// Sample Test Cases
+console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 }])); 
+// Output: SULTAN'S DINE
+
+console.log(topRatedRestaurant([{ name: "KFC", rating: 4.2 }, { name: "Pizza Hut", rating: 4.6 }])); 
+// Output: PIZZA HUT
+
+console.log(topRatedRestaurant([])); 
+// Output: Invalid
+
+console.log(topRatedRestaurant("restaurants")); 
+// Output: Invalid
+
+// Hidden & Edge Test Cases (Potential Code Crashers)
+// console.log(topRatedRestaurant([{ rating: 4.8 }])); 
+// Hidden Danger: Crashes with TypeError: Cannot read properties of undefined (reading 'toUpperCase') if 'name' is missing!
+// Expected Output: Invalid
+
+// console.log(topRatedRestaurant([null, { name: "KFC", rating: 4.5 }])); 
+// Hidden Danger: Crashes with TypeError when trying to read properties of null
+// Expected Output: Invalid
+
+console.log(topRatedRestaurant([{ name: "Tasty Treatment", rating: "4.8" }])); 
+// Hidden Danger: String rating instead of number
+// Expected Output: Invalid
+
+console.log(topRatedRestaurant([{}, {}])); 
+// Output: Invalid
+// console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 }]));
+// console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 },{ name: "Pizza Hut", rating: 4.9 }]));
+// console.log(topRatedRestaurant([{}, {}]));
+// console.log(topRatedRestaurant([{}]));
+// console.log(topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, {}]));
+// console.log(topRatedRestaurant([{ name: "Chillox", rating: NaN }, {},{ name: "Sultan's Dine", rating: 4.8 }]));
+// console.log(topRatedRestaurant([]));
 // topRatedRestaurant([{ name: "Chillox", rating: 4.5 }, { name: "Sultan's Dine", rating: 4.8 }]);
