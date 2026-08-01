@@ -1,0 +1,1 @@
+// 8. Write a function that takes two numbers as parameters and returns the larger of the two without using Math.max().

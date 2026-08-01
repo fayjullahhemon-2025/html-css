@@ -1,0 +1,1 @@
+// 5. Write a function that takes a number as a parameter and returns its factorial.

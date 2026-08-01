@@ -1,0 +1,1 @@
+// 3. Write a function with a default parameter for discount percentage (10%) that returns the discounted price of an item.
