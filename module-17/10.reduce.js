@@ -26,6 +26,12 @@ const products = [
     {id:19,name:"Organic Apples",catagory:"groceries",price:5,inStock:true},
     {id:20,name:"Artisan Bread",catagory:"groceries",price:8,inStock:true},
 ];
-
-// console.log(products.filter(products=>products.price>150 && products.inStock).sort((a,b)=>a.price-b.price));//ascending order e show
-console.log(products.filter(products=>products.price>150 && products.inStock).sort((a,b)=>a.price-b.price).map(product=>({name: product.name, price:product.price})));
+const productTotalPrice = products.reduce((accumulator,currentValue)=>{
+    if(currentValue.inStock){
+        return accumulator+currentValue.price;//ekbare count hishab kre return krbe
+    }
+    else{
+        return accumulator;
+    }
+},0)
+console.log(productTotalPrice);
