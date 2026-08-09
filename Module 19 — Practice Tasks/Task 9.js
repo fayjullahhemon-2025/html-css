@@ -4,3 +4,8 @@
 // Output: false
 // Input: isStrictMatch(18, 18) 
 // Output: true
+const isStrictMatch = (input, target)=>{
+    return input===target;
+}
+console.log(isStrictMatch("18",18));
+console.log(isStrictMatch(18,18));
