@@ -29,7 +29,7 @@ console.log(filterActiveUsers([
 ]
 ));
 console.log(filterActiveUsers([
- {name:"A", isActive:true},
+ {name:"undefined", isActive:null},
  {name:"B", isActive:true},
  {name:"C", isActive:false},
  {name:"D", isActive:true},

@@ -23,7 +23,6 @@ function countHashtags(caption) {
         return "Invalid";
     }
 
-    //hidden cases are not complete
 
 }
 console.log(countHashtags("Loving this weather today #sunny #vibes #weekend"));
@@ -31,3 +30,4 @@ console.log(countHashtags("No hashtags here"));
 console.log(countHashtags("#ai #ml #dp data science"));
 console.log(countHashtags(123));
 console.log(countHashtags(["#fun"]));
+

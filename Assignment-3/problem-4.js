@@ -2,7 +2,7 @@ function bonusScore(scores) {
     if (Array.isArray(scores) && scores.length > 0) {
         let count = 0;
         for(const score of scores){
-            if(typeof score!=='number'|| Number.isNaN(score)){
+            if(typeof score!=='number'|| Number.isNaN(score)||score===Infinity||score===-Infinity){
                 count++;
             }
         }
@@ -25,6 +25,8 @@ console.log(bonusScore([80, NaN, 70]));
 console.log(bonusScore([80, undefined, 70]));
 console.log(bonusScore([80, 35.4, 70]));
 console.log(bonusScore(null));
+console.log(bonusScore([80, 35, Infinity]));
+console.log(bonusScore([80, 35, -Infinity]));
 
 // Return "Invalid" যদি—
 // Input Array না হয়।

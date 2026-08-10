@@ -6,23 +6,28 @@ function studentIntroduction(student) {
         return `My name is ${name}. I am ${age} years old. I am learning ${course}.`
     }
 }
-const student = {
-    name: "Rafi",
-    age: 18,
-    course: "JavaScript"
-}
-const student2 = {
-    name: "Rafi",
-    course: "JavaScript"
-}
-const student3 = {
-    name: "Rafi",
-}
-const student4 = {
-}
+// const student = {
+//     name: "Rafi",
+//     age: 18,
+//     course: "JavaScript"
+// }
+// const student2 = {
+//     name: "Rafi",
+//     course: "JavaScript"
+// }
+// const student3 = {
+//     name: "Rafi",
+// }
+// const student4 = {
+// }
 
-console.log(studentIntroduction(student));
-console.log(studentIntroduction(student2));
-console.log(studentIntroduction(student3));
-console.log(studentIntroduction(student4));
+const student5 = {
+    name: "   ",
+    course: "JavaScript"
+}
+// console.log(studentIntroduction(student));
+// console.log(studentIntroduction(student2));
+// console.log(studentIntroduction(student3));
+// console.log(studentIntroduction(student4));
+console.log(studentIntroduction(student5));
 
