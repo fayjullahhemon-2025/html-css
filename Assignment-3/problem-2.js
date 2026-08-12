@@ -1,5 +1,5 @@
 function filterActiveUsers(users) {
-    if(!Array.isArray(users) || users.length===0){
+    if(!Array.isArray(users) || users.length===0|| users.some(user=> !user)){
         return "Invalid";
     }else{
         if(users.some((user)=> !user.hasOwnProperty('isActive')||typeof user.isActive!=='boolean'|| typeof user.name!=='string' )){
@@ -29,7 +29,7 @@ console.log(filterActiveUsers([
 ]
 ));
 console.log(filterActiveUsers([
- {name:"undefined", isActive:null},
+ {name:"undefined", isActive:true},
  {name:"B", isActive:true},
  {name:"C", isActive:false},
  {name:"D", isActive:true},
@@ -37,8 +37,15 @@ console.log(filterActiveUsers([
 ]
 ))
 console.log(filterActiveUsers([
- {name:"18", isActive:true},
- {name:"B", isActive:true},
+//  {name:"A", isActive:undefined},
+//  {name:"A", isActive:null},
+ { isActive:true},
+ {name:"C", isActive:false},
+ {name:"D", isActive:true},
+ {name:"E", isActive:false},
+]
+))
+console.log(filterActiveUsers([
  {name:"C", isActive:false},
  {name:"D", isActive:true},
  {name:"E", isActive:false},
