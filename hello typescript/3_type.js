@@ -1,0 +1,12 @@
+"use strict";
+// let districts = 'Noyakhali';
+let districts = 'Noyakhali';
+districts = 'Mymensing';
+// districts = 34;
+// const officer:string = 145;
+let input = 'hello';
+input = false;
+console.log(districts);
+const stock = 100;
+const isAvailable = false;
+console.log(stock);
