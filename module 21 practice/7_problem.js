@@ -1,0 +1,12 @@
+"use strict";
+const num1 = [1, 2, 3, 4, 5];
+const num2 = [6, 7, 8, 9];
+const newNumArr = [...num1, ...num2];
+console.log(newNumArr);
+const elderSiblings = ['Nasima', 'Rubina', 'Sumi'];
+const youngerSiblings = ['Emon', 'Payel', 'Moon'];
+const siblings = [...elderSiblings, ...youngerSiblings];
+// const newArr:number[] = [...num1,...elderSiblings];
+// const newArr:string[] = [...num1,...elderSiblings];
+const newArr = [...num1, ...elderSiblings];
+console.log(newArr);

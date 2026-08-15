@@ -1,0 +1,11 @@
+const num1:number[]=[1,2,3,4,5];
+const num2:number[]=[6,7,8,9];
+const newNumArr:number[] = [...num1,...num2];
+console.log(newNumArr);
+const elderSiblings:string[]=['Nasima','Rubina','Sumi'];
+const youngerSiblings:string[]=['Emon','Payel','Moon'];
+const siblings = [...elderSiblings,...youngerSiblings];
+// const newArr:number[] = [...num1,...elderSiblings];
+// const newArr:string[] = [...num1,...elderSiblings];
+const newArr = [...num1,...elderSiblings];
+console.log(newArr);
