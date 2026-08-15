@@ -16,4 +16,4 @@ const book:{
     pages:200,
     // isUsed:true
 }
-console.log(book)
+console.log(book) 
