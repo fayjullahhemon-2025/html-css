@@ -20,6 +20,14 @@ function get(a) {
 let getStr = get('abc');
 let getNum = get(2);
 let getBool = get(true);
-console.log(getStr);
-console.log(getNum);
-console.log(getBool);
+// console.log(getStr);
+// console.log(getNum);
+// console.log(getBool);
+function log(a) {
+    console.log(a);
+}
+// log(5);
+log("Hello".length);
+const identity = (a) => {
+    return a;
+};
