@@ -14,3 +14,4 @@ function getDistanceSummary(distances) {
 console.log(getDistanceSummary([4, 6, 5, 9]));
 console.log(getDistanceSummary([10, 10]));
 console.log(getDistanceSummary([]));
+console.log(getDistanceSummary([3, 2, 3, 4]));
