@@ -18,3 +18,4 @@ console.log(getDistanceSummary([3, 2, 3, 4]));
 console.log(getDistanceSummary([3, 2, 3, 0]));
 console.log(getDistanceSummary([3, 2, 3, 1]));
 console.log(getDistanceSummary([3, 2, 3, 2]));
+console.log(getDistanceSummary([3, 2, 3, 3]));
