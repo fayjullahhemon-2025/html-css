@@ -1,5 +1,6 @@
 type Light = 'red' | 'yellow' | 'green';
-function getTrafficAction(light: Light): string {
+type Action = "Stop" | "Slow Down" | "Go";
+function getTrafficAction(light: Light): Action {
     if(light === 'red'){
         return "Stop";
     }else if(light === 'yellow'){
