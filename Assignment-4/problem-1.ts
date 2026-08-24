@@ -3,10 +3,10 @@ function getBatteryStatus(percentage: number): Status {
     if(percentage>=0 && percentage<=20){
         return "Low";
     }
-    else if(percentage>=21 && percentage<=50){
+    else if(percentage<=50){
         return "Medium";
     }
-    else if(percentage>=51 && percentage<=90){
+    else if(percentage<=90){
         return "High";
     }
     else{
@@ -14,7 +14,11 @@ function getBatteryStatus(percentage: number): Status {
     }
 }
 
-console.log(getBatteryStatus(18));
+console.log(getBatteryStatus(20.5));
+console.log(getBatteryStatus(21));
 console.log(getBatteryStatus(50));
-console.log(getBatteryStatus(86));
-console.log(getBatteryStatus(95));
+console.log(getBatteryStatus(51));
+console.log(getBatteryStatus(90));
+console.log(getBatteryStatus(91));
+console.log(getBatteryStatus(100));
+
