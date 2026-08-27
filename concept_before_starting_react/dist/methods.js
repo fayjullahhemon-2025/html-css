@@ -20,4 +20,7 @@ const showData = items.map((item, index) => {
 const products = ["Book", "Pen", "Laptop"];
 const searchProduct = products.find(item => item === 'Pen');
 // console.log(searchProduct)
+//includes()
+const string = "Hello I am Emoinna";
+console.log(string.includes("Emoinna"));
 //# sourceMappingURL=methods.js.map
