@@ -17,5 +17,5 @@ else {
 }
 //left=true     right=true , return username
 const result = userName && "User name is " + userName; //short circuit
-console.log(result);
+// console.log(result)
 //# sourceMappingURL=operators.js.map
