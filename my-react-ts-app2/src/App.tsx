@@ -1,4 +1,4 @@
-
+import Todo from './todo'
 import './App.css'
 
 function App() { //main entry point function
@@ -10,10 +10,13 @@ function App() { //main entry point function
 
       <div>
         <h1>Get started</h1>
-        <Person></Person>
+        <Todo task = "Practice react" time="5 am"></Todo>
+        <Todo task = "Take a shower" time="10 am"></Todo>
+        <Todo task = "No social media today" ></Todo>
+        {/* <Person></Person>
         <Products name="Laptop" price="32000"></Products>
         <Products name="Mobile" price="12000"></Products>
-        <Student name="Emon" grades="3.62"></Student>
+        <Student name="Emon" grades="3.62"></Student> */}
       </div>
 
 
