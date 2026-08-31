@@ -1,9 +1,11 @@
 // import Todo from './todo'
-import Task from './Task'
+// import Task from './Task'
+// import Book from './Book'
+import Users from './Users'
 import './App.css'
 
-function App() { //main entry point function
-
+function App() { //main entry point functon
+const books = ['physics','chemistry','biology'];
 
   return (
     <>
@@ -11,9 +13,23 @@ function App() { //main entry point function
 
       <div>
         <h1>Get started</h1>
-        <Task name="finish module" isDone={false}></Task>
+
+        <Users></Users>
+
+
+      {/* {
+        books.map(book=> <Book name = {book}></Book>)
+      } */}
+
+
+        {/* {
+          books.map(book=> <li>{book}</li>)
+        } */}
+
+
+        {/* <Task name="finish module" isDone={false}></Task>
         <Task name="Facebooking time wasting" isDone={true}></Task>
-        <Task name="Sharing Reels" isDone={true}></Task>
+        <Task name="Sharing Reels" isDone={true}></Task> */}
         {/* <Todo task = "Practice react" time="5 am"></Todo>
         <Todo task = "Take a shower" time="10 am"></Todo>
         <Todo task = "No social media today" ></Todo> */}
