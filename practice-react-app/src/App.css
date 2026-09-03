@@ -1,5 +1,5 @@
 
-.student{
+.student, .todo{
   border:1px solid salmon;
   border-radius:5px ;
   /* line-height: 5px; */

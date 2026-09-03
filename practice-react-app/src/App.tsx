@@ -1,15 +1,19 @@
-
+import Todo from './Todo'
 import './App.css'
 
 export default function App() {
   return (
     <>
+    <Todo task = "Cudling pong" time = "3 pm"></Todo>
+      {/* <Todo task1 = 'Coding' task2 = 'Eating'></Todo> */}
+      {/* <Todo></Todo> */}
       {/* <Person></Person>*/}
       {/*function ke html tag er moto likhte hobe */}
       {/* <Welcome></Welcome> */}
-      <Student></Student>
-      <Student></Student>
-      <Student></Student>
+      {/* <Student name="Emon" age="26"></Student> */}
+      {/* <Student></Student>
+      <Student></Student> */}
+
     </>
   )
 }
@@ -67,16 +71,17 @@ export default function App() {
 //     </>
 //   )
 // }
-function Student(){
+function Student(props:{name?:string,age?:string}) {
+  console.log(props);
   return (
     <>
       <div style={{
-        color:'white',
-        backgroundColor:'salmon',
-        margin:'5px',
-        padding:'2px',
-        border:'2px solid red',
-        borderRadius:'10px'
+        color: 'white',
+        backgroundColor: 'salmon',
+        margin: '5px',
+        padding: '2px',
+        border: '2px solid red',
+        borderRadius: '10px'
       }}>
         <h3>Name:</h3>
         <p>Age:</p>
