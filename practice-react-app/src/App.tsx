@@ -1,10 +1,13 @@
-import Todo from './Todo'
+// import Todo from './Todo'
+import Task from './Task'
 import './App.css'
 
 export default function App() {
   return (
     <>
-    <Todo task = "Cudling pong" time = "3 pm"></Todo>
+    <Task name="Coding" isDone ={true}></Task>
+    <Task name="Eating" isDone ={false}></Task>
+    {/* <Todo task = "Cudling pong" time = "3 pm"></Todo> */}
       {/* <Todo task1 = 'Coding' task2 = 'Eating'></Todo> */}
       {/* <Todo></Todo> */}
       {/* <Person></Person>*/}

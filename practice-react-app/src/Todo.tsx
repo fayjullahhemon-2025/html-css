@@ -25,7 +25,7 @@ import './App.css'
 
 // interface TodoPrototype {
 //     task:string,
-//     time:string 
+//     time?:string 
 // }
 
 // function Todo(promps:TodoPrototype){
