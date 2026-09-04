@@ -1,13 +1,25 @@
 // import Todo from './Todo'
-import Task from './Task'
+// import Task from './Task'
+// import Books from './Books'
+import User from './User'
 import './App.css'
 
 export default function App() {
+  // const books:string[] = ["Physics", "Chemistry", "Math", "Biology"];
+  
   return (
     <>
-    <Task name="Coding" isDone ={true}></Task>
-    <Task name="Eating" isDone ={false}></Task>
-    {/* <Todo task = "Cudling pong" time = "3 pm"></Todo> */}
+      <div>
+        {
+          <User ></User>
+        }
+      </div>
+      {/* {
+        books.map(book=> <Books name={book}></Books>)
+      } */}
+      {/* <Task name="Coding" isDone ={true}></Task>
+    <Task name="Eating" isDone ={false}></Task> */}
+      {/* <Todo task = "Cudling pong" time = "3 pm"></Todo> */}
       {/* <Todo task1 = 'Coding' task2 = 'Eating'></Todo> */}
       {/* <Todo></Todo> */}
       {/* <Person></Person>*/}
@@ -74,21 +86,21 @@ export default function App() {
 //     </>
 //   )
 // }
-function Student(props:{name?:string,age?:string}) {
-  console.log(props);
-  return (
-    <>
-      <div style={{
-        color: 'white',
-        backgroundColor: 'salmon',
-        margin: '5px',
-        padding: '2px',
-        border: '2px solid red',
-        borderRadius: '10px'
-      }}>
-        <h3>Name:</h3>
-        <p>Age:</p>
-      </div>
-    </>
-  )
-}
+// function Student(props: { name?: string, age?: string }) {
+//   console.log(props);
+//   return (
+//     <>
+//       <div style={{
+//         color: 'white',
+//         backgroundColor: 'salmon',
+//         margin: '5px',
+//         padding: '2px',
+//         border: '2px solid red',
+//         borderRadius: '10px'
+//       }}>
+//         <h3>Name:</h3>
+//         <p>Age:</p>
+//       </div>
+//     </>
+//   )
+// }
