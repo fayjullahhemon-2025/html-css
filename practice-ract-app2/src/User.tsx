@@ -1,3 +1,4 @@
+import UserCard from './UserCard'
 interface UserTypes{
     name:string,
     isLoggedIn:boolean 
@@ -8,10 +9,17 @@ const user:UserTypes[]= [
     {name:"Moon",isLoggedIn:true},
     {name:"Nasima",isLoggedIn:false},
 ]
-export default function User(user:UserTypes){
+export default function User(){
+
     return (
         <>
-            <li>Name: {user.name}</li>
+            <div>
+                {
+                    user.map(u=> 
+                        <UserCard name = {u.name} isLoggedIn = {u.isLoggedIn}></UserCard>
+                    )
+                }
+            </div>
         </>
     )
 }
