@@ -1,5 +1,6 @@
 // import Book from './Book'
-import User from './User'
+// import User from './User'
+import Sports from './Sports'
 import './App.css'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <>
       
       {
-        <User></User>
+        <Sports></Sports>
+        // <User></User>
         // books.map(book=> book) // PhysicsChemistryBiologyMath
         // books.map(book=> <li>{book}</li>) 
         // books.map(book=> <Book name={book}></Book>)
