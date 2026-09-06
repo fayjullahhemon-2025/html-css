@@ -1,7 +1,9 @@
 
 import './App.css'
+import Batter from './Batter'
 import Cart from './Cart'
 import Counter from './Counter'
+import Light from './Light'
 
 function App() {
   // const divStyle = {
@@ -29,7 +31,9 @@ function App() {
   // }
   return (
     <>
-      <Counter></Counter>
+      <Light></Light>
+      {/* <Batter></Batter> */}
+      {/* <Counter></Counter> */}
       {/* <Cart></Cart> */}
       {/* <div style = {divStyle}> */}
       {/* <button onClick = {eventHandler1()}>Button 1 </button> */}
