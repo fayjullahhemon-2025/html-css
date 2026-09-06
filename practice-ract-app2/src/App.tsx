@@ -1,6 +1,7 @@
 // import Book from './Book'
 // import User from './User'
-import Sports from './Sports'
+// import Sports from './Sports'
+import ProfileCard from './ProfileCard.tsx'
 import './App.css'
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
   // const books:string[] = ["Physics","Chemistry","Biology","Math"];
   return (
     <>
-      
+      <ProfileCard name='Emon' age={26} hobby = "Sleeping" ></ProfileCard>
       {
-        <Sports></Sports>
+        // <Sports></Sports>
         // <User></User>
         // books.map(book=> book) // PhysicsChemistryBiologyMath
         // books.map(book=> <li>{book}</li>) 
