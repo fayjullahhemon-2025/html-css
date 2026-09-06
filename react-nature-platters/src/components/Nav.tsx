@@ -1,4 +1,5 @@
 import { IoMdSearch } from "react-icons/io"
+import logo from '../assets/logo.svg'
 
 const Nav = () => {
     const navStyle = {
@@ -21,7 +22,7 @@ const Nav = () => {
     }
     return (
         <nav style={navStyle}>
-            <img src="" alt="" />
+            <img src={logo} alt="" />
             <ul style={listStyle}>
                 <li><a style={linkStyle} href="/">Home</a></li>
                 <li><a style={linkStyle} href="/">About Us</a></li>
