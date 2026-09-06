@@ -1,8 +1,9 @@
 
 import './App.css'
 import Cart from './Cart'
+import Counter from './Counter'
 
-function App2() {
+function App() {
   // const divStyle = {
   //   width:'100%',
   //   display:'flex',
@@ -28,11 +29,12 @@ function App2() {
   // }
   return (
     <>
-      <Cart></Cart>
+      <Counter></Counter>
+      {/* <Cart></Cart> */}
       {/* <div style = {divStyle}> */}
-        {/* <button onClick = {eventHandler1()}>Button 1 </button> */}
-        {/* <button onClick = 'eventHandler1()'>Button1</button> */}
-        {/* <button style={buttonStyle} onClick={eventHandler1}>Button 1</button>
+      {/* <button onClick = {eventHandler1()}>Button 1 </button> */}
+      {/* <button onClick = 'eventHandler1()'>Button1</button> */}
+      {/* <button style={buttonStyle} onClick={eventHandler1}>Button 1</button>
         <button style = {buttonStyle} onClick = {eventHandler2}>Button 2</button>
         <button style = {buttonStyle} onClick = {()=>{
           alert(`Button ${3} pressed`);
@@ -45,4 +47,4 @@ function App2() {
   )
 }
 
-export default App2
+export default App
