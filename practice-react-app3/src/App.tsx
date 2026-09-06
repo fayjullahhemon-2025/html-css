@@ -4,6 +4,7 @@ import Batter from './Batter'
 import Cart from './Cart'
 import Counter from './Counter'
 import Light from './Light'
+import PasswordShowHide from './PasswordShowHide'
 
 function App() {
   // const divStyle = {
@@ -31,7 +32,8 @@ function App() {
   // }
   return (
     <>
-      <Light></Light>
+      <PasswordShowHide></PasswordShowHide>
+      {/* <Light></Light> */}
       {/* <Batter></Batter> */}
       {/* <Counter></Counter> */}
       {/* <Cart></Cart> */}
