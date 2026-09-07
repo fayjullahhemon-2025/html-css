@@ -7,6 +7,7 @@ import Counter from './Counter'
 import Light from './Light'
 import PasswordShowHide from './PasswordShowHide'
 import Users from './Users'
+import Post from './Post'
 
 function App() {
   // const divStyle = {
@@ -37,10 +38,18 @@ function App() {
     const data = await res.json();
     return data;
   }
+  const userPostPromise = async() =>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
         <Users usersDataPromise={usersDataPromise()}></Users>
+      </Suspense>
+      <Suspense>
+        <Post userPostPromise={userPostPromise()}></Post>
       </Suspense>
       {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
