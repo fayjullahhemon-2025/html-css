@@ -1,10 +1,12 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import Batter from './Batter'
 import Cart from './Cart'
 import Counter from './Counter'
 import Light from './Light'
 import PasswordShowHide from './PasswordShowHide'
+import Users from './Users'
 
 function App() {
   // const divStyle = {
@@ -30,9 +32,17 @@ function App() {
   // const eventHandler4 = (id:number) =>{
   //   alert(`Button ${id} pressed`)
   // }
+  const usersDataPromise = async()=>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
-      <PasswordShowHide></PasswordShowHide>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Users usersDataPromise={usersDataPromise()}></Users>
+      </Suspense>
+      {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
       {/* <Batter></Batter> */}
       {/* <Counter></Counter> */}
