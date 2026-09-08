@@ -10,6 +10,7 @@ import Users from './Users'
 import Post from './Post'
 import Comments from './Comments'
 import Albums from './Albums'
+import Photos from './Photos'
 
 function App() {
   // const divStyle = {
@@ -55,6 +56,11 @@ function App() {
     const data = await res.json();
     return data;
   }
+  const userPothosPromise = async() =>{
+    const res = await fetch('https://picsum.photos/v2/list?page=1&limit=10');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
       {/* <Suspense fallback={<p>Loading...</p>}>
@@ -75,6 +81,11 @@ function App() {
       {/* <Suspense>
         <Albums userAlbumsPromise = {userAlbumsPromise()}></Albums>
       </Suspense> */}
+      <p>--------------------------------
+      </p>
+      <Suspense fallback = {<p>Loading....</p>}>
+        <Photos userPothosPromise = {userPothosPromise()}></Photos>
+      </Suspense>
       {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
       {/* <Batter></Batter> */}
