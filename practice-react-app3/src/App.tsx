@@ -11,6 +11,7 @@ import Post from './Post'
 import Comments from './Comments'
 import Albums from './Albums'
 import Photos from './Photos'
+import Todos from './Todos.tsx'
 
 function App() {
   // const divStyle = {
@@ -61,8 +62,16 @@ function App() {
     const data = await res.json();
     return data;
   }
+  const userTodosPromise = async()=>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
+      <Suspense>
+        <Todos userTodosPromise = {userTodosPromise()}></Todos>
+      </Suspense>
       {/* <Suspense fallback={<p>Loading...</p>}>
         <Users usersDataPromise={usersDataPromise()}></Users>
       </Suspense>
@@ -81,11 +90,11 @@ function App() {
       {/* <Suspense>
         <Albums userAlbumsPromise = {userAlbumsPromise()}></Albums>
       </Suspense> */}
-      <p>--------------------------------
+      {/* <p>--------------------------------
       </p>
       <Suspense fallback = {<p>Loading....</p>}>
         <Photos userPothosPromise = {userPothosPromise()}></Photos>
-      </Suspense>
+      </Suspense> */}
       {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
       {/* <Batter></Batter> */}
