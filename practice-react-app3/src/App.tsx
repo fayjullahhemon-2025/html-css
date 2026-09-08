@@ -12,6 +12,7 @@ import Comments from './Comments'
 import Albums from './Albums'
 import Photos from './Photos'
 import Todos from './Todos.tsx'
+import Todos2 from './Todos2.tsx'
 
 function App() {
   // const divStyle = {
@@ -69,9 +70,12 @@ function App() {
   }
   return (
     <>
-      <Suspense>
-        <Todos userTodosPromise = {userTodosPromise()}></Todos>
+      <Suspense fallback = {<p>Loading...</p>}>
+        <Todos2></Todos2>
       </Suspense>
+      {/* <Suspense>
+        <Todos userTodosPromise = {userTodosPromise()}></Todos>
+      </Suspense> */}
       {/* <Suspense fallback={<p>Loading...</p>}>
         <Users usersDataPromise={usersDataPromise()}></Users>
       </Suspense>
