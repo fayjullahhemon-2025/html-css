@@ -8,6 +8,7 @@ import Light from './Light'
 import PasswordShowHide from './PasswordShowHide'
 import Users from './Users'
 import Post from './Post'
+import Comments from './Comments'
 
 function App() {
   // const divStyle = {
@@ -43,13 +44,26 @@ function App() {
     const data = await res.json();
     return data;
   }
+  const userCommentsPromise = async()=>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/comments');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
-      <Suspense fallback={<p>Loading...</p>}>
+      {/* <Suspense fallback={<p>Loading...</p>}>
         <Users usersDataPromise={usersDataPromise()}></Users>
       </Suspense>
       <Suspense>
         <Post userPostPromise={userPostPromise()}></Post>
+      </Suspense> */}
+      {/* <p>-----------------------------------------------</p>
+      <Suspense fallback = {<p>Loading comments....</p>}>
+        <Comments userCommentsPromise = {userCommentsPromise()}></Comments>
+      </Suspense> */}
+      <p>--------------------------------------------------</p>
+      <Suspense fallback={<p>Loading albums....</p>}>
+        
       </Suspense>
       {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
