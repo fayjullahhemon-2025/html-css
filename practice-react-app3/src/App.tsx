@@ -9,6 +9,7 @@ import PasswordShowHide from './PasswordShowHide'
 import Users from './Users'
 import Post from './Post'
 import Comments from './Comments'
+import Albums from './Albums'
 
 function App() {
   // const divStyle = {
@@ -49,6 +50,11 @@ function App() {
     const data = await res.json();
     return data;
   }
+  const userAlbumsPromise = async() =>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/albums');
+    const data = await res.json();
+    return data;
+  }
   return (
     <>
       {/* <Suspense fallback={<p>Loading...</p>}>
@@ -61,10 +67,14 @@ function App() {
       <Suspense fallback = {<p>Loading comments....</p>}>
         <Comments userCommentsPromise = {userCommentsPromise()}></Comments>
       </Suspense> */}
-      <p>--------------------------------------------------</p>
+      {/* <p>--------------------------------------------------</p>
       <Suspense fallback={<p>Loading albums....</p>}>
-        
-      </Suspense>
+        <Albums></Albums>
+      </Suspense> */}
+      <p>-----------------------------------------------</p>
+      {/* <Suspense>
+        <Albums userAlbumsPromise = {userAlbumsPromise()}></Albums>
+      </Suspense> */}
       {/* <PasswordShowHide></PasswordShowHide> */}
       {/* <Light></Light> */}
       {/* <Batter></Batter> */}
