@@ -4,3 +4,10 @@
     margin: 5px;
     padding:5px;
 }
+.countryCard img{
+    width: 200px;
+}
+.visited-country{
+    background-color: lightgreen;
+    color:green;
+}

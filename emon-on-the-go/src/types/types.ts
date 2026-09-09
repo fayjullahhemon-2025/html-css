@@ -12,4 +12,10 @@ export interface CountriesPromiseData{
             alt:string
         }
     }
+    population:{
+        population:number
+    }
+    capital:{
+        capital:string
+    }
 }
