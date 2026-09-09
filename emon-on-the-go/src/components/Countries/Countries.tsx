@@ -1,5 +1,6 @@
 import { use } from "react"
-import type { CountriesPromiseData } from "../types/types"
+import type { CountriesPromiseData } from "../../types/types"
+import CountryCard from "../CountryCard/CountryCard";
 interface CountriesPropType{
     countriesPromiseData:Promise<CountriesPromiseData[]>
 }
@@ -9,7 +10,7 @@ export default function Countries({countriesPromiseData}:CountriesPropType){
         <div>
             <h2>{countries.length}</h2>
             {
-                countries.map(country=> <h3>{country?.name?.common}</h3> )
+                countries.map(country=> <CountryCard key={country?.ccn3?.ccn3} country = {country} ></CountryCard> )
             }
         </div>
     )
