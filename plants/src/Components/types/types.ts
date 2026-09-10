@@ -1,7 +1,8 @@
 export interface PlantTypes{
+    id:number,
     image:string,
     name:string,
     description:string,
-    catagory:string,
+    category:string,
     price:number
 }

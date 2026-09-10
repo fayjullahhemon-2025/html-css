@@ -12,8 +12,10 @@ export default function Plants({plantsPromiseData}:plantsPromiseData){
             <h3>Plants</h3>
             <p>Plants: {plants.length}</p>
             <div className='plants'>
+               
                 {
-                    plants.map(plant=> <PlantCard plant={plant} ></PlantCard>)
+                    
+                    plants.map(plant=> <PlantCard key={plant?.id} plant={plant} ></PlantCard>)
                 }
             </div>
         </div>
