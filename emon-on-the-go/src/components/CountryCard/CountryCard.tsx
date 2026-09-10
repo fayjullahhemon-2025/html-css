@@ -26,6 +26,6 @@ export default function CountryCard({country,visitedCountHandling}:CountryCardPr
                 {visited ? 'visited':'mark as visited'}
             </button>
         </div>
-
+ 
     )
 }
