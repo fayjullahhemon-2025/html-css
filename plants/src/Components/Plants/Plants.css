@@ -1,0 +1,6 @@
+.plants{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    border:1px solid greenyellow;
+    border-radius: 10px;
+}
