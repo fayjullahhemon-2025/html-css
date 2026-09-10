@@ -2,11 +2,12 @@ import { useState } from "react"
 import type { PlantTypes } from "../types/types"
 import './plant-card.css'
 interface PlantCardType{
-    plant:PlantTypes
+    plant:PlantTypes,
+    // handleToggleGarden:(plant:PlantTypes)=>void;
 }
-export default function PlantCard({plant}:PlantCardType){
+export default function PlantCard({plant,}:PlantCardType){
     // console.log(plant)
-    // const [plants,addPlants] = useState<PlantTypes[]>([]);
+    
     
     return(
         <div className="plant-card">
