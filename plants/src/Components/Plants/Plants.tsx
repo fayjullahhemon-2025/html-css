@@ -24,6 +24,10 @@ export default function Plants({plantsPromiseData}:plantsPromiseData){
         <div>
             <h3>Plants</h3>
             <p>Plants: {plants.length}</p>
+            <h4>Seleted Plant: {myGarden.length}</h4>
+            {
+                myGarden.map(mg=> <li>{mg.name}</li>)
+            }
             <div className='plants'>
                
                 {
@@ -31,7 +35,7 @@ export default function Plants({plantsPromiseData}:plantsPromiseData){
                     plants.map(plant=> <PlantCard 
                         key={plant?.id} 
                         plant={plant} 
-                        // handleToggleGarden={handleToggleGarden}
+                        handleToggleGarden={handleToggleGarden}
                         ></PlantCard>)
                 }
             </div>
