@@ -1,0 +1,10 @@
+.menu-card{
+    
+    border:1px solid rgb(17, 102, 151);
+    border-radius: 10px;
+    padding: 10px;
+}
+.menu-card img{
+    width: 150px;
+    height: 150px;
+}
