@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { PlayerTypes } from "../types/PlayerTypes"
 import { CgProfile } from "react-icons/cg";
 import { FaFlag } from "react-icons/fa";
@@ -6,6 +7,10 @@ interface PlayerPropType{
     player:PlayerTypes;
 }
 export default function PlayerCard({player}:PlayerPropType){
+    const [selected,setSelected] = useState<boolean>(false);
+    const handleToggleSelected = ()=>{
+        setSelected(!selected);
+    }
     return(
         <div className="flex flex-col justify-center p-2 rounded-2xl bg-amber-50">
             <img className="w-75 h-55 rounded-2xl" src={player.plyerImg} alt="" />
@@ -20,7 +25,7 @@ export default function PlayerCard({player}:PlayerPropType){
                     <h3>{player.battingType}</h3>
                     <h3>{player.bowlingType}</h3>
                     <h3>Price:{player.price}</h3>
-                    <button className="w-30 p-0.5 rounded-md bg-gray-200">Choose Player</button>
+                    <button className="w-30 p-0.5 rounded-md bg-gray-200" onClick= {handleToggleSelected} >{selected?"Selected":"Choose Player"}</button>
                 </div>
             </div>
         </div>
