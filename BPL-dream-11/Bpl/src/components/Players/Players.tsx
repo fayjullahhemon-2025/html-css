@@ -5,13 +5,19 @@ import AvailablePlayer from "./AvailablePlayer";
 import SelectedPlayer from "./SelectedPlayer";
 interface playersPropType {
     playersPromiseData: Promise<PlayerTypes[]>
+    coin:number
+    handleSetCoin:(price:number)=>void
 }
 type ButtonType = 'available' | 'selected'
-export default function Players({ playersPromiseData }: playersPropType) {
+export default function Players({ playersPromiseData,coin,handleSetCoin }: playersPropType) {
     const players = use(playersPromiseData);
     const [buttonType,setButtonType]= useState<ButtonType>('available');
     const handleToggleButtonType = (button:ButtonType)=>{
         setButtonType(button);
+    }
+    const [taken,setTaken] = useState<PlayerTypes[]>([]);
+    const handleSetToken = (player:PlayerTypes[])=>{
+        // const exist = player.find(p=> p?.id === player?)
     }
     console.log(players)
     return (
@@ -28,7 +34,7 @@ export default function Players({ playersPromiseData }: playersPropType) {
                 </div>
             </div>
             {
-                buttonType==='available'? <AvailablePlayer players={players} ></AvailablePlayer>:<SelectedPlayer></SelectedPlayer>
+                buttonType==='available'? <AvailablePlayer coin={coin} handleSetCoin={handleSetCoin} players={players} ></AvailablePlayer>:<SelectedPlayer></SelectedPlayer>
             }
 
         </div>

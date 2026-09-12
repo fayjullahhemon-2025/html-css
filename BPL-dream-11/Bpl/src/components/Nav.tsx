@@ -1,5 +1,8 @@
 import Logo from '../assets/logo.png'
-export default function Nav(){
+interface NavPropTypes{
+    coin:number;
+}
+export default function Nav({coin}:NavPropTypes){
     return(
         <nav className="flex justify-around items-center">
             <img className="w-14  " src={Logo} alt="" />
@@ -11,7 +14,7 @@ export default function Nav(){
                     <li>Schedules</li>
                 </ul>
                 <div className="flex justify-around gap-2 ml-10">
-                    <h3>0 Coin</h3>💲
+                    <h3>{coin} Coin</h3>💲
                 </div>
             </div>
         </nav>

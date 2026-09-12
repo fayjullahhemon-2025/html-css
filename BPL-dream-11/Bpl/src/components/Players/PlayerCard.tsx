@@ -5,11 +5,15 @@ import { FaFlag } from "react-icons/fa";
 
 interface PlayerPropType{
     player:PlayerTypes;
+    coin:number,
+    handleSetCoin:(price:number)=>void
 }
-export default function PlayerCard({player}:PlayerPropType){
+export default function PlayerCard({player,coin,handleSetCoin}:PlayerPropType){
     const [selected,setSelected] = useState<boolean>(false);
+    
     const handleToggleSelected = ()=>{
         setSelected(!selected);
+        handleSetCoin(player.price)
     }
     return(
         <div className="flex flex-col justify-center p-2 rounded-2xl bg-amber-50">
@@ -25,7 +29,8 @@ export default function PlayerCard({player}:PlayerPropType){
                     <h3>{player.battingType}</h3>
                     <h3>{player.bowlingType}</h3>
                     <h3>Price:{player.price}</h3>
-                    <button className="w-30 p-0.5 rounded-md bg-gray-200" onClick= {handleToggleSelected} >{selected?"Selected":"Choose Player"}</button>
+                    
+                    <button disabled = {selected?true:false} className={`w-30 p-0.5 rounded-md bg-gray-200`} onClick= {handleToggleSelected} >{selected?"Selected":"Choose Player"}</button>
                 </div>
             </div>
         </div>
