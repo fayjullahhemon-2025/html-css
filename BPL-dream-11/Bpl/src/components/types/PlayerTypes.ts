@@ -1,4 +1,5 @@
 export interface PlayerTypes{
+    id:number,
     playerName: string,
     plyerImg: string,
     origin: string,

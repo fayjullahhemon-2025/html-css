@@ -1,16 +1,16 @@
 [
   {
     "playerName": "Shakib Al Hasan",
-    "plyerImg": "https://example.com/images/shakib.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "All-Rounder",
-    "bowlingType": "Slow Left-Arm Orthodox",
+    "bowlingType": "Slow Left-Arm",
     "battingType": "Left-Handed",
     "price": 150000
   },
   {
     "playerName": "Virat Kohli",
-    "plyerImg": "https://example.com/images/kohli.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "India",
     "playerType": "Batter",
     "bowlingType": "Right-Arm Medium",
@@ -19,7 +19,7 @@
   },
   {
     "playerName": "Rashid Khan",
-    "plyerImg": "https://example.com/images/rashid.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Afghanistan",
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Leg Spin",
@@ -28,7 +28,7 @@
   },
   {
     "playerName": "Mustafizur Rahman",
-    "plyerImg": "https://example.com/images/mustafizur.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Fast-Medium",
@@ -37,7 +37,7 @@
   },
   {
     "playerName": "Travis Head",
-    "plyerImg": "https://example.com/images/head.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Australia",
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
@@ -46,7 +46,7 @@
   },
   {
     "playerName": "Jasprit Bumrah",
-    "plyerImg": "https://example.com/images/bumrah.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "India",
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
@@ -55,7 +55,7 @@
   },
   {
     "playerName": "Litton Das",
-    "plyerImg": "https://example.com/images/litton.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
@@ -64,7 +64,7 @@
   },
   {
     "playerName": "Taskin Ahmed",
-    "plyerImg": "https://example.com/images/taskin.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
@@ -73,7 +73,7 @@
   },
   {
     "playerName": "Towhid Hridoy",
-    "plyerImg": "https://example.com/images/hridoy.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
@@ -82,7 +82,7 @@
   },
   {
     "playerName": "Mehidy Hasan Miraz",
-    "plyerImg": "https://example.com/images/miraz.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "All-Rounder",
     "bowlingType": "Right-Arm Off Break",
@@ -91,7 +91,7 @@
   },
   {
     "playerName": "Shoriful Islam",
-    "plyerImg": "https://example.com/images/shoriful.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Medium-Fast",
@@ -100,7 +100,7 @@
   },
   {
     "playerName": "Najmul Hossain Shanto",
-    "plyerImg": "https://example.com/images/shanto.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Bangladesh",
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
@@ -109,7 +109,7 @@
   },
   {
     "playerName": "Jos Buttler",
-    "plyerImg": "https://example.com/images/buttler.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "England",
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
@@ -118,7 +118,7 @@
   },
   {
     "playerName": "Pat Cummins",
-    "plyerImg": "https://example.com/images/cummins.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Australia",
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
@@ -127,7 +127,7 @@
   },
   {
     "playerName": "Heinrich Klaasen",
-    "plyerImg": "https://example.com/images/klaasen.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "South Africa",
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "Right-Arm Off Break",
@@ -136,7 +136,7 @@
   },
   {
     "playerName": "Mitchell Starc",
-    "plyerImg": "https://example.com/images/starc.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Australia",
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Fast",
@@ -145,7 +145,7 @@
   },
   {
     "playerName": "Nicholas Pooran",
-    "plyerImg": "https://example.com/images/pooran.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "West Indies",
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "Right-Arm Off Break",
@@ -154,7 +154,7 @@
   },
   {
     "playerName": "Kagiso Rabada",
-    "plyerImg": "https://example.com/images/rabada.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "South Africa",
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
@@ -163,7 +163,7 @@
   },
   {
     "playerName": "Glenn Maxwell",
-    "plyerImg": "https://example.com/images/maxwell.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "Australia",
     "playerType": "All-Rounder",
     "bowlingType": "Right-Arm Off Break",
@@ -172,7 +172,7 @@
   },
   {
     "playerName": "Rishabh Pant",
-    "plyerImg": "https://example.com/images/pant.jpg",
+    "plyerImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/250px-DAVID_WARNER_%2811704782453%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "origin": "India",
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
