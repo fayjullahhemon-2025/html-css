@@ -1,9 +1,10 @@
 import type { PlayerTypes } from "../types/PlayerTypes"
 import { IoTrashBinOutline } from "react-icons/io5";
 interface SelectedPlayerCardProp{
-    tk:PlayerTypes
+    tk:PlayerTypes,
+    handleDeleteTaken:(player:PlayerTypes)=>void
 }
-export default function SelectedPlayerCard({tk}:SelectedPlayerCardProp){
+export default function SelectedPlayerCard({tk,handleDeleteTaken}:SelectedPlayerCardProp){
     return(
         <div className="flex justify-between items-center">
             <div className="flex justify-center items-center" >
@@ -13,7 +14,9 @@ export default function SelectedPlayerCard({tk}:SelectedPlayerCardProp){
                     <p>{tk.playerType}</p>
                 </div>
             </div>
-            <button > <IoTrashBinOutline /> </button>
+            <button onClick = {()=>{
+                handleDeleteTaken(tk)
+            }}> <IoTrashBinOutline /> </button>
         </div>
     )
 }

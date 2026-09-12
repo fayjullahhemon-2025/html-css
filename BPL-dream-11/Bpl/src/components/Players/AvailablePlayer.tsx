@@ -11,7 +11,7 @@ interface playersPropType {
 export default function AvailablePlayer({ players, coin, handleSetCoin, taken, setTaken }: playersPropType) {
     return (
         <div className="grid grid-cols-3 gap-1 justify-items-center" >
-            {players.map(player => <PlayerCard coin={coin} handleSetCoin={handleSetCoin} player={player} taken={taken} setTaken = {setTaken} ></PlayerCard>)}
+            {players.map((player) => <PlayerCard key={player.id} coin={coin} handleSetCoin={handleSetCoin} player={player} taken={taken} setTaken = {setTaken} ></PlayerCard>)}
         </div>
     )
 }

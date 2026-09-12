@@ -24,7 +24,7 @@ function App() {
       <Nav coin={coin} ></Nav>
       <Banner></Banner>
       <Suspense fallback={<p>Loading.....</p>}>
-        <Players coin={coin} handleSetCoin = {handleSetCoin} playersPromiseData={playersPromiseData()}></Players>
+        <Players coin={coin} handleSetCoin = {handleSetCoin} setCoin={setCoin} playersPromiseData={playersPromiseData()}></Players>
       </Suspense>
     </>
   )

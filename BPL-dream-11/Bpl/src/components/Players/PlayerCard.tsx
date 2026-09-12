@@ -15,10 +15,7 @@ export default function PlayerCard({ player, coin, handleSetCoin, taken, setTake
     const handleSetTaken = (player:PlayerTypes)=>{
         setTaken([...taken,player]);
     }
-    const handleDeleteTaken = (player:PlayerTypes)=>{
-        const remaining = taken.filter(p=> p?.id !== player?.id);
-        setTaken(remaining);
-    }
+    
     const handleToggleSelected = () => {
         if (player.price <= coin) {
             setSelected(!selected);

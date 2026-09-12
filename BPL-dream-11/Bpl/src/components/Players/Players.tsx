@@ -1,15 +1,16 @@
-import { use, useState } from "react"
+import { use, useState, type Dispatch, type SetStateAction } from "react"
 import type { PlayerTypes } from "../types/PlayerTypes";
-import PlayerCard from "./PlayerCard";
+// import PlayerCard from "./PlayerCard";
 import AvailablePlayer from "./AvailablePlayer";
 import SelectedPlayer from "./SelectedPlayer";
 interface playersPropType {
     playersPromiseData: Promise<PlayerTypes[]>
     coin:number
     handleSetCoin:(price:number)=>void
+    setCoin:Dispatch<SetStateAction<number>>
 }
 type ButtonType = 'available' | 'selected'
-export default function Players({ playersPromiseData,coin,handleSetCoin }: playersPropType) {
+export default function Players({ playersPromiseData,coin,handleSetCoin ,setCoin}: playersPropType) {
     const players = use(playersPromiseData);
     const [buttonType,setButtonType]= useState<ButtonType>('available');
     const handleToggleButtonType = (button:ButtonType)=>{
@@ -32,7 +33,7 @@ export default function Players({ playersPromiseData,coin,handleSetCoin }: playe
                 </div>
             </div>
             {
-                buttonType==='available'? <AvailablePlayer coin={coin} handleSetCoin={handleSetCoin} players={players} taken={taken} setTaken = {setTaken}></AvailablePlayer>:<SelectedPlayer taken={taken} ></SelectedPlayer>
+                buttonType==='available'? <AvailablePlayer coin={coin} handleSetCoin={handleSetCoin} players={players} taken={taken} setTaken = {setTaken}></AvailablePlayer>:<SelectedPlayer coin={coin} taken={taken} setTaken={setTaken} setCoin={setCoin} ></SelectedPlayer>
             }
 
         </div>
