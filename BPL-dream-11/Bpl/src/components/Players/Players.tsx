@@ -1,6 +1,8 @@
 import { use, useState } from "react"
 import type { PlayerTypes } from "../types/PlayerTypes";
 import PlayerCard from "./PlayerCard";
+import AvailablePlayer from "./AvailablePlayer";
+import SelectedPlayer from "./SelectedPlayer";
 interface playersPropType {
     playersPromiseData: Promise<PlayerTypes[]>
 }
@@ -15,7 +17,7 @@ export default function Players({ playersPromiseData }: playersPropType) {
     return (
         <div className="flex flex-col justify-center w-270 m-auto">
             <div className="flex justify-between items-center w-270 m-auto">
-                <h2>Available Players</h2>
+                <h2>{buttonType === 'available'?'Available Players':'Selected Players'}</h2>
                 <div className="flex items-center">
                     <button onClick={()=>{
                         handleToggleButtonType('available')
@@ -25,9 +27,9 @@ export default function Players({ playersPromiseData }: playersPropType) {
                     }} className={` ${buttonType==='selected' ? 'bg-amber-500' : 'bg-gray-100'} w-20 p-0.5 rounded-r-lg cursor-pointer`}>Selected</button>
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-1 justify-items-center" >
-                {players.map(player => <PlayerCard player={player} ></PlayerCard>)}
-            </div>
+            {
+                buttonType==='available'? <AvailablePlayer players={players} ></AvailablePlayer>:<SelectedPlayer></SelectedPlayer>
+            }
 
         </div>
     )
