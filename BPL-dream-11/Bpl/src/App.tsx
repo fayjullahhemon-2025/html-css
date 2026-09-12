@@ -10,7 +10,7 @@ function App() {
         const data = await res.json();
         return data;
     }
-    const [coin,setCoin] = useState<number>(500000000);
+    const [coin,setCoin] = useState<number>(500);
     const handleSetCoin = (price:number):void=>{
       if(price<=coin){
         setCoin(coin-price);

@@ -1,21 +1,34 @@
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { PlayerTypes } from "../types/PlayerTypes"
 import { CgProfile } from "react-icons/cg";
 import { FaFlag } from "react-icons/fa";
 
-interface PlayerPropType{
-    player:PlayerTypes;
-    coin:number,
-    handleSetCoin:(price:number)=>void
+interface PlayerPropType {
+    player: PlayerTypes;
+    coin: number,
+    handleSetCoin: (price: number) => void;
+    taken: PlayerTypes[]
+    setTaken: Dispatch<SetStateAction<PlayerTypes[]>>
 }
-export default function PlayerCard({player,coin,handleSetCoin}:PlayerPropType){
-    const [selected,setSelected] = useState<boolean>(false);
-    
-    const handleToggleSelected = ()=>{
-        setSelected(!selected);
-        handleSetCoin(player.price)
+export default function PlayerCard({ player, coin, handleSetCoin, taken, setTaken }: PlayerPropType) {
+    const [selected, setSelected] = useState<boolean>(false);
+    const handleSetTaken = (player:PlayerTypes)=>{
+        setTaken([...taken,player]);
     }
-    return(
+    const handleDeleteTaken = (player:PlayerTypes)=>{
+        const remaining = taken.filter(p=> p?.id !== player?.id);
+        setTaken(remaining);
+    }
+    const handleToggleSelected = () => {
+        if (player.price <= coin) {
+            setSelected(!selected);
+            handleSetCoin(player.price);
+            handleSetTaken(player);
+        } else {
+            setSelected(false);
+        }
+    }
+    return (
         <div className="flex flex-col justify-center p-2 rounded-2xl bg-amber-50">
             <img className="w-75 h-55 rounded-2xl" src={player.plyerImg} alt="" />
             <div className="mt-1.5">
@@ -29,8 +42,8 @@ export default function PlayerCard({player,coin,handleSetCoin}:PlayerPropType){
                     <h3>{player.battingType}</h3>
                     <h3>{player.bowlingType}</h3>
                     <h3>Price:{player.price}</h3>
-                    
-                    <button disabled = {selected?true:false} className={`w-30 p-0.5 rounded-md bg-gray-200`} onClick= {handleToggleSelected} >{selected?"Selected":"Choose Player"}</button>
+
+                    <button disabled={selected ? true : false} className={`w-30 p-0.5 rounded-md bg-gray-200`} onClick={handleToggleSelected} >{selected ? "Selected" : "Choose Player"}</button>
                 </div>
             </div>
         </div>

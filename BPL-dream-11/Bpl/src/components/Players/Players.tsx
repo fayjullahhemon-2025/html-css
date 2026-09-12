@@ -16,9 +16,7 @@ export default function Players({ playersPromiseData,coin,handleSetCoin }: playe
         setButtonType(button);
     }
     const [taken,setTaken] = useState<PlayerTypes[]>([]);
-    const handleSetToken = (player:PlayerTypes[])=>{
-        // const exist = player.find(p=> p?.id === player?)
-    }
+    
     console.log(players)
     return (
         <div className="flex flex-col justify-center w-270 m-auto">
@@ -34,7 +32,7 @@ export default function Players({ playersPromiseData,coin,handleSetCoin }: playe
                 </div>
             </div>
             {
-                buttonType==='available'? <AvailablePlayer coin={coin} handleSetCoin={handleSetCoin} players={players} ></AvailablePlayer>:<SelectedPlayer></SelectedPlayer>
+                buttonType==='available'? <AvailablePlayer coin={coin} handleSetCoin={handleSetCoin} players={players} taken={taken} setTaken = {setTaken}></AvailablePlayer>:<SelectedPlayer taken={taken} ></SelectedPlayer>
             }
 
         </div>

@@ -6,7 +6,7 @@
     "playerType": "All-Rounder",
     "bowlingType": "Slow Left-Arm",
     "battingType": "Left-Handed",
-    "price": 150000
+    "price": 150
   },
   {
     "playerName": "Virat Kohli",
@@ -15,7 +15,7 @@
     "playerType": "Batter",
     "bowlingType": "Right-Arm Medium",
     "battingType": "Right-Handed",
-    "price": 200000
+    "price": 200
   },
   {
     "playerName": "Rashid Khan",
@@ -24,7 +24,7 @@
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Leg Spin",
     "battingType": "Right-Handed",
-    "price": 180000
+    "price": 180
   },
   {
     "playerName": "Mustafizur Rahman",
@@ -33,7 +33,7 @@
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Fast-Medium",
     "battingType": "Left-Handed",
-    "price": 120000
+    "price": 120
   },
   {
     "playerName": "Travis Head",
@@ -42,7 +42,7 @@
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Left-Handed",
-    "price": 160000
+    "price": 160
   },
   {
     "playerName": "Jasprit Bumrah",
@@ -51,7 +51,7 @@
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
     "battingType": "Right-Handed",
-    "price": 190000
+    "price": 190
   },
   {
     "playerName": "Litton Das",
@@ -60,7 +60,7 @@
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
     "battingType": "Right-Handed",
-    "price": 110000
+    "price": 110
   },
   {
     "playerName": "Taskin Ahmed",
@@ -69,7 +69,7 @@
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
     "battingType": "Right-Handed",
-    "price": 130000
+    "price": 130
   },
   {
     "playerName": "Towhid Hridoy",
@@ -78,7 +78,7 @@
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Right-Handed",
-    "price": 95000
+    "price": 950
   },
   {
     "playerName": "Mehidy Hasan Miraz",
@@ -87,7 +87,7 @@
     "playerType": "All-Rounder",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Right-Handed",
-    "price": 140000
+    "price": 140
   },
   {
     "playerName": "Shoriful Islam",
@@ -96,7 +96,7 @@
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Medium-Fast",
     "battingType": "Left-Handed",
-    "price": 105000
+    "price": 105
   },
   {
     "playerName": "Najmul Hossain Shanto",
@@ -105,7 +105,7 @@
     "playerType": "Batter",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Left-Handed",
-    "price": 125000
+    "price": 125
   },
   {
     "playerName": "Jos Buttler",
@@ -114,7 +114,7 @@
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
     "battingType": "Right-Handed",
-    "price": 175000
+    "price": 175
   },
   {
     "playerName": "Pat Cummins",
@@ -123,7 +123,7 @@
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
     "battingType": "Right-Handed",
-    "price": 185000
+    "price": 185
   },
   {
     "playerName": "Heinrich Klaasen",
@@ -132,7 +132,7 @@
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Right-Handed",
-    "price": 165000
+    "price": 165
   },
   {
     "playerName": "Mitchell Starc",
@@ -141,7 +141,7 @@
     "playerType": "Bowler",
     "bowlingType": "Left-Arm Fast",
     "battingType": "Left-Handed",
-    "price": 170000
+    "price": 170
   },
   {
     "playerName": "Nicholas Pooran",
@@ -150,7 +150,7 @@
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Left-Handed",
-    "price": 155000
+    "price": 155
   },
   {
     "playerName": "Kagiso Rabada",
@@ -159,7 +159,7 @@
     "playerType": "Bowler",
     "bowlingType": "Right-Arm Fast",
     "battingType": "Left-Handed",
-    "price": 145000
+    "price": 145
   },
   {
     "playerName": "Glenn Maxwell",
@@ -168,7 +168,7 @@
     "playerType": "All-Rounder",
     "bowlingType": "Right-Arm Off Break",
     "battingType": "Right-Handed",
-    "price": 140000
+    "price": 140
   },
   {
     "playerName": "Rishabh Pant",
@@ -177,6 +177,6 @@
     "playerType": "Wicketkeeper-Batter",
     "bowlingType": "None",
     "battingType": "Left-Handed",
-    "price": 195000
+    "price": 195
   }
 ]
