@@ -1,0 +1,182 @@
+[
+  {
+    "playerName": "Shakib Al Hasan",
+    "plyerImg": "https://example.com/images/shakib.jpg",
+    "origin": "Bangladesh",
+    "playerType": "All-Rounder",
+    "bowlingType": "Slow Left-Arm Orthodox",
+    "battingType": "Left-Handed",
+    "price": 150000
+  },
+  {
+    "playerName": "Virat Kohli",
+    "plyerImg": "https://example.com/images/kohli.jpg",
+    "origin": "India",
+    "playerType": "Batter",
+    "bowlingType": "Right-Arm Medium",
+    "battingType": "Right-Handed",
+    "price": 200000
+  },
+  {
+    "playerName": "Rashid Khan",
+    "plyerImg": "https://example.com/images/rashid.jpg",
+    "origin": "Afghanistan",
+    "playerType": "Bowler",
+    "bowlingType": "Right-Arm Leg Spin",
+    "battingType": "Right-Handed",
+    "price": 180000
+  },
+  {
+    "playerName": "Mustafizur Rahman",
+    "plyerImg": "https://example.com/images/mustafizur.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Bowler",
+    "bowlingType": "Left-Arm Fast-Medium",
+    "battingType": "Left-Handed",
+    "price": 120000
+  },
+  {
+    "playerName": "Travis Head",
+    "plyerImg": "https://example.com/images/head.jpg",
+    "origin": "Australia",
+    "playerType": "Batter",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Left-Handed",
+    "price": 160000
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "plyerImg": "https://example.com/images/bumrah.jpg",
+    "origin": "India",
+    "playerType": "Bowler",
+    "bowlingType": "Right-Arm Fast",
+    "battingType": "Right-Handed",
+    "price": 190000
+  },
+  {
+    "playerName": "Litton Das",
+    "plyerImg": "https://example.com/images/litton.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Wicketkeeper-Batter",
+    "bowlingType": "None",
+    "battingType": "Right-Handed",
+    "price": 110000
+  },
+  {
+    "playerName": "Taskin Ahmed",
+    "plyerImg": "https://example.com/images/taskin.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Bowler",
+    "bowlingType": "Right-Arm Fast",
+    "battingType": "Right-Handed",
+    "price": 130000
+  },
+  {
+    "playerName": "Towhid Hridoy",
+    "plyerImg": "https://example.com/images/hridoy.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Batter",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Right-Handed",
+    "price": 95000
+  },
+  {
+    "playerName": "Mehidy Hasan Miraz",
+    "plyerImg": "https://example.com/images/miraz.jpg",
+    "origin": "Bangladesh",
+    "playerType": "All-Rounder",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Right-Handed",
+    "price": 140000
+  },
+  {
+    "playerName": "Shoriful Islam",
+    "plyerImg": "https://example.com/images/shoriful.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Bowler",
+    "bowlingType": "Left-Arm Medium-Fast",
+    "battingType": "Left-Handed",
+    "price": 105000
+  },
+  {
+    "playerName": "Najmul Hossain Shanto",
+    "plyerImg": "https://example.com/images/shanto.jpg",
+    "origin": "Bangladesh",
+    "playerType": "Batter",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Left-Handed",
+    "price": 125000
+  },
+  {
+    "playerName": "Jos Buttler",
+    "plyerImg": "https://example.com/images/buttler.jpg",
+    "origin": "England",
+    "playerType": "Wicketkeeper-Batter",
+    "bowlingType": "None",
+    "battingType": "Right-Handed",
+    "price": 175000
+  },
+  {
+    "playerName": "Pat Cummins",
+    "plyerImg": "https://example.com/images/cummins.jpg",
+    "origin": "Australia",
+    "playerType": "Bowler",
+    "bowlingType": "Right-Arm Fast",
+    "battingType": "Right-Handed",
+    "price": 185000
+  },
+  {
+    "playerName": "Heinrich Klaasen",
+    "plyerImg": "https://example.com/images/klaasen.jpg",
+    "origin": "South Africa",
+    "playerType": "Wicketkeeper-Batter",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Right-Handed",
+    "price": 165000
+  },
+  {
+    "playerName": "Mitchell Starc",
+    "plyerImg": "https://example.com/images/starc.jpg",
+    "origin": "Australia",
+    "playerType": "Bowler",
+    "bowlingType": "Left-Arm Fast",
+    "battingType": "Left-Handed",
+    "price": 170000
+  },
+  {
+    "playerName": "Nicholas Pooran",
+    "plyerImg": "https://example.com/images/pooran.jpg",
+    "origin": "West Indies",
+    "playerType": "Wicketkeeper-Batter",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Left-Handed",
+    "price": 155000
+  },
+  {
+    "playerName": "Kagiso Rabada",
+    "plyerImg": "https://example.com/images/rabada.jpg",
+    "origin": "South Africa",
+    "playerType": "Bowler",
+    "bowlingType": "Right-Arm Fast",
+    "battingType": "Left-Handed",
+    "price": 145000
+  },
+  {
+    "playerName": "Glenn Maxwell",
+    "plyerImg": "https://example.com/images/maxwell.jpg",
+    "origin": "Australia",
+    "playerType": "All-Rounder",
+    "bowlingType": "Right-Arm Off Break",
+    "battingType": "Right-Handed",
+    "price": 140000
+  },
+  {
+    "playerName": "Rishabh Pant",
+    "plyerImg": "https://example.com/images/pant.jpg",
+    "origin": "India",
+    "playerType": "Wicketkeeper-Batter",
+    "bowlingType": "None",
+    "battingType": "Left-Handed",
+    "price": 195000
+  }
+]
