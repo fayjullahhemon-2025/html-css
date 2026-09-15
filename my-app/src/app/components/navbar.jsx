@@ -9,6 +9,7 @@ export default function Navbar() {
         <li><a href="/showcase">Showcase</a></li>
         <li><a href="/about/developer">Developer</a></li> */}
         <li><Link href="/about">About</Link></li>
+        <li><Link href="/blog">Blog</Link></li>
         <li><Link href="/docs">Docs</Link></li>
         <li><Link href="/showcase">Showcase</Link></li>
         <li><Link href="/about/developer">Developer</Link></li>
