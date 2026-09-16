@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default async function TodoPage() {
     const res = await fetch('https://jsonplaceholder.typicode.com/todos');
     const todos = await res.json();
@@ -9,7 +11,11 @@ export default async function TodoPage() {
                         <h2 className="card-title">{todo.title}</h2>
                         <p>Completed: {todo.completed ? "Done":"Not Done"}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            {
+                                <Link href={`/todo/${todo.id}`} >
+                                    <button className="btn btn-primary">View Details</button>
+                                </Link>
+                            }
                         </div>
                     </div>
                 </div>)
