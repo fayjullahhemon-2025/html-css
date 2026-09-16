@@ -13,6 +13,7 @@ export default function Navbar() {
         <li><Link href="/docs">Docs</Link></li>
         <li><Link href="/showcase">Showcase</Link></li>
         <li><Link href="/about/developer">Developer</Link></li>
+        <li><Link href="/about/designer">Designer</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
