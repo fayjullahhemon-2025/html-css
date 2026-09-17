@@ -1,5 +1,5 @@
 import Developer from "../../components/Developer";
-
+import styles from './developer.module.css'
 const developers = [
   {
     id: 1,
@@ -68,7 +68,7 @@ const developers = [
 ];
 export default function DeveloperPage(){
     return(
-        <div className="flex justify-center items-center flex-col" >
+        <div className={`flex justify-center items-center flex-col ${styles.bg}`} >
             <h1 className="text-4xl" >Meet our development team</h1>
             <div className="grid grid-cols-3 gap-2 m-1.5" >
                 {

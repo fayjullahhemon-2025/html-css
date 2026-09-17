@@ -1,20 +1,25 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
-
 export default function Navbar() {
+
+    const pathname = usePathname();
+    console.log(pathname)
+
     const link = <>
         {/* <li><a>Item 1</a></li>
         <li><a>Item 2</a></li> */}
         {/* <li><a href="/about">About</a></li>
         <li><a href="/showcase">Showcase</a></li>
         <li><a href="/about/developer">Developer</a></li> */}
-        <li><Link href="/about">About</Link></li>
-        <li><Link href="/blog">Blog</Link></li>
-        <li><Link href="/docs">Docs</Link></li>
-        <li><Link href="/showcase">Showcase</Link></li>
-        <li><Link href="/about/developer">Developer</Link></li>
-        <li><Link href="/about/designer">Designer</Link></li>
-        <li><Link href="/dashboard">Dashboard</Link></li>
+        <li><Link className={pathname==='/about'?'text-blue-500':''} href="/about">About</Link></li>
+        <li><Link className={pathname==='/blog'?'text-blue-500':''} href="/blog">Blog</Link></li>
+        <li><Link className={pathname==='/docs'?'text-blue-500':''} href="/docs">Docs</Link></li>
+        <li><Link className={pathname==='/showcase'?'text-blue-500':''} href="/showcase">Showcase</Link></li>
+        <li><Link className={pathname==='/about/developer'?'text-blue-500':''} href="/about/developer">Developer</Link></li>
+        <li><Link className={pathname==='/about/designer'?'text-blue-500':''} href="/about/designer">Designer</Link></li>
+        <li><Link className={pathname==='/dashboard'?'text-blue-500':''} href="/dashboard">Dashboard</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">

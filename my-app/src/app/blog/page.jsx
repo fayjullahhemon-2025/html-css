@@ -66,6 +66,10 @@ const blogPosts = [
     likes: 180
   }
 ];
+export const metadata = {
+  title:"Next | Blog",
+  description:"Blog section"
+}
 export default function BlogPage(){
     return (
         <div className='grid grid-cols-3 gap-4 mt-10 w-fit m-auto ' >

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
-
+export const metadata = {
+    title:"Next | About",
+    description:"Ny next app"
+}
 export default function AboutPage(){
     return (
         <div className="flex justify-center items-center font-bold text-4xl flex-col" >
