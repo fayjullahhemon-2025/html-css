@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 2499,
+      "stock": 15,
+      "rating": 4.5,
+      "description": "Comfortable wireless headphones with clear sound, deep bass, and a long-lasting battery.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 3999,
+      "stock": 10,
+      "rating": 4.3,
+      "description": "A stylish smartwatch with fitness tracking, heart-rate monitoring, notifications, and multiple sports modes.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "price": 3299,
+      "stock": 20,
+      "rating": 4.6,
+      "description": "Lightweight running shoes designed with a comfortable sole for daily running, walking, and workouts.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    },
+    {
+      "id": 4,
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "price": 1899,
+      "stock": 12,
+      "rating": 4.4,
+      "description": "A durable leather backpack with multiple compartments for carrying a laptop, books, and everyday essentials.",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+    },
+    {
+      "id": 5,
+      "name": "Mechanical Keyboard",
+      "category": "Computer",
+      "price": 4599,
+      "stock": 8,
+      "rating": 4.7,
+      "description": "A responsive mechanical keyboard with tactile keys, comfortable typing, and a durable design for work and gaming.",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    },
+    {
+      "id": 6,
+      "name": "Coffee Mug",
+      "category": "Home",
+      "price": 599,
+      "stock": 30,
+      "rating": 4.2,
+      "description": "A simple and stylish ceramic coffee mug that is perfect for coffee, tea, and other hot beverages.",
+      "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d"
+    }
+  ]
+}
