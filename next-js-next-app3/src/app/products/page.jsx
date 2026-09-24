@@ -1,8 +1,9 @@
-import React from "react";
+import React, { cache } from "react";
 import ProductCard from "../components/ProductCard";
 const getProducts = async()=>{
     try{
-        const res = await fetch('http://localhost:5000/products');
+        // const res = await fetch('http://localhost:5000/products',{cache:'force-cache'});
+        const res = await fetch('http://localhost:5000/products',{cache:'no-store'});
         if(!res.ok){
             throw new Error('Products data fetch failed');
         }
