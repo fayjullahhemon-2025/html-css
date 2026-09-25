@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 import logo from '@/assets/book.ico'
+import Link from 'next/link';
 const link = <>
-    <li><a>Item 1</a></li>
-    <li><a>Item 3</a></li>
+    <li><Link href='/' >Home</Link></li>
+    <li><Link href='/books' >Books</Link></li>
 </>
 export default function Navbar() {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
-import BooksCard from "./BooksCard";
+// import BooksCard from "./BooksCard";
 import { BookType } from "@/types/books.types";
-import Link from "next/link";
+import BooksCard from "@/components/homepage/BooksCard";
 const getBooks = async () => {
     try {
         const res = await fetch('http://localhost:5000/booksData.json');
@@ -15,21 +15,19 @@ const getBooks = async () => {
         console.log('Must show');
     }
 }
-export default async function Books() {
+export default async function BooksPage() {
     const books = await getBooks();
     console.log(books)
     return (
         <div className="container mx-auto" >
-            <h1 className="text-2xl font-bold my-5" >Popular books</h1>
+            <h1 className="text-2xl font-bold my-5" >All books</h1>
             <div className="grid grid-cols-3 gap-3 container mx-auto" >
 
                 {
-                    books.slice(0,4).map((book: BookType) => <BooksCard key={book.bookId} book={book} ></BooksCard>)
+                    books.map((book: BookType) => <BooksCard key={book.bookId} book={book} ></BooksCard>)
                 }
             </div>
-            <div className="flex justify-center items-center">
-                <Link href={'/books'} ><button className="btn-accent p-2  cursor-pointer" >View All Books</button></Link>
-            </div>
+            
         </div>
     )
 }

@@ -1,10 +1,11 @@
 import { BookType } from "@/types/books.types";
+import Link from "next/link";
 import React from "react";
 
-interface BookInterface{
-    book:BookType;
+interface BookInterface {
+    book: BookType;
 }
-export default function BooksCard({ book }:BookInterface) {
+export default function BooksCard({ book }: BookInterface) {
     return (
         <div className=" max-w-sm rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
             {/* Cover Image & Category Badge */}
@@ -61,6 +62,12 @@ export default function BooksCard({ book }:BookInterface) {
                     <div>
                         {book.publisher} ({book.yearOfPublishing})
                     </div>
+                    <Link href={`/books/${book.bookId-1}`} >
+                        <button className="btn-accent p-2 " >
+                            
+                            View details
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
