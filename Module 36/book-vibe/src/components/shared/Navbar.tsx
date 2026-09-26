@@ -5,6 +5,7 @@ import Link from 'next/link';
 const link = <>
     <li><Link href='/' >Home</Link></li>
     <li><Link href='/books' >Books</Link></li>
+    <li><Link href='/listed-books' >Listed Books</Link></li>
 </>
 export default function Navbar() {
     return (

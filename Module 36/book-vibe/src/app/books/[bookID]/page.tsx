@@ -1,6 +1,8 @@
+import ReadBtn from '@/components/bookDetails/ReadBtn';
+import WishlistBtn from '@/components/bookDetails/WishListBtn';
 import React from 'react'
 
-const getBook = async (bookId) => {
+const getBook = async (bookId:string) => {
     try {
         const res = await fetch(`http://localhost:5000/${bookId}`);
         if (!res.ok) {
@@ -14,7 +16,7 @@ const getBook = async (bookId) => {
     }
 }
 
-export default async function bookDetailsPage({ params }) {
+export default async function bookDetailsPage({ params }:{params:{bookID:string}}) {
     const { bookID } = await params;
     console.log(bookID)
     const book = await getBook(bookID);
@@ -25,11 +27,11 @@ export default async function bookDetailsPage({ params }) {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
                 
                 {/* Left Column: Image Area */}
-                <div className="md:col-span-5 bg-[#F3F3F3] rounded-3xl p-8 flex justify-center items-center min-h-[400px] md:min-h-[560px]">
+                <div className="md:col-span-5 bg-[#F3F3F3] rounded-3xl p-8 flex justify-center items-center min-h-100 md:min-h-140">
                     <img 
                         src={book.image} 
                         alt={book.bookName} 
-                        className="w-full max-w-[300px] h-auto object-contain drop-shadow-2xl"
+                        className="w-full max-w-75 h-auto object-contain drop-shadow-2xl"
                     />
                 </div>
 
@@ -63,7 +65,7 @@ export default async function bookDetailsPage({ params }) {
                     <div className="flex items-center gap-3 pt-3 border-b border-gray-100 pb-6">
                         <p className="text-gray-900 font-bold">Tag</p>
                         <div className="flex flex-wrap gap-3">
-                            {book.tags.map((tag, idx) => (
+                            {book.tags.map((tag:string, idx:number) => (
                                 <span 
                                     key={idx} 
                                     className="text-sm font-semibold bg-[#F3FDF5] text-[#23BE0A] px-4 py-1.5 rounded-full"
@@ -91,12 +93,8 @@ export default async function bookDetailsPage({ params }) {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 pt-8">
-                        <button className="px-10 py-3.5 border border-gray-300 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 active:scale-98 transition">
-                            Read
-                        </button>
-                        <button className="px-10 py-3.5 bg-[#50B1C9] hover:bg-[#45a1b8] text-white font-semibold rounded-lg shadow-sm active:scale-98 transition">
-                            Wishlist
-                        </button>
+                        <ReadBtn book={book} ></ReadBtn>
+                        <WishlistBtn book={book} ></WishlistBtn>
                     </div>
 
                 </div>
