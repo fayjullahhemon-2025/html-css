@@ -3,9 +3,9 @@ import { BooksContext } from '@/context/BooksContext'
 import { BookType } from '@/types/books.types'
 import React, { Dispatch, SetStateAction, useContext } from 'react'
 
-const handleReadBook = (book: BookType,readBooks,setReadBooks) => {
+const handleReadBook = (book: BookType,readBooks:BookType[],setReadBooks:Dispatch<SetStateAction<BookType[]>>) => {
     // console.log('Clicked read book btn', book)
-    const exist = readBooks.find(readBook=> readBook.bookId === book.bookId)
+    const exist = readBooks.find((readBook:BookType)=> readBook.bookId === book.bookId)
     if(!exist){
         setReadBooks([...readBooks,book])
     }else{
@@ -13,6 +13,7 @@ const handleReadBook = (book: BookType,readBooks,setReadBooks) => {
     }
 
 }
+
 export default function ReadBtn({ book }: { book: BookType }) {
     const {readBooks, setReadBooks} = useContext(BooksContext);
     

@@ -43,14 +43,24 @@ export default function ListedBooks() {
                 <input type="radio" name="my_tabs_3" className="tab" aria-label="Read" />
                 <div className="tab-content bg-base-100 border-base-300 p-6">
                     {
-                        sortedWishList.map(wb => <li key={wb.bookId}>{wb.bookName}</li>)
+                        sortedWishList.map(wb => <div key={wb.bookId}>
+                            <h1>{wb.bookName}</h1>
+                            <p>Total Pages: {wb.totalPages}</p>
+                            <p>Rating: {wb.rating}</p>
+                            <p>Rating: {wb.yearOfPublishing}</p>
+                        </div>)
                     }
                 </div>
 
                 <input type="radio" name="my_tabs_3" className="tab" aria-label="Wish" defaultChecked />
                 <div className="tab-content bg-base-100 border-base-300 p-6">
                     {
-                        sortedReadBooks.map(rb => <li key={rb.bookId}>{rb.bookName}</li>)
+                        sortedReadBooks.map(rb => <div key={rb.bookId}>
+                            <h1>{rb.bookName}</h1>
+                            <p>Total Pages: {rb.totalPages}</p>
+                            <p>Rating: {rb.rating}</p>
+                            <p>Rating: {rb.yearOfPublishing}</p>
+                        </div>)
                     }
                 </div>
 
