@@ -11,9 +11,9 @@ export default function SignUp() {
         const data = Object.fromEntries(formData.entries());
         console.log(data);
         const { data:resData, error } = await signUp.email({
-            name: data.name, // required, The name of the user.
-            email: data.email, // required, The email address of the user.
-            password: data.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
+            name: data.name, 
+            email: data.email, 
+            password: data.password, 
             
             
         });

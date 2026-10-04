@@ -1,8 +1,9 @@
 "use client";
-
+import {Eye, EyeSlash} from "@gravity-ui/icons";
 import { signIn } from "../../../lib/auth-client";
 // import {Check} from "@gravity-ui/icons";
-import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
+import { useState } from "react";
 
 export default function SignIn() {
   const onSubmit = async (e) => {
@@ -18,7 +19,7 @@ export default function SignIn() {
     });
     console.log(resData,error)
   };
-
+const [isVisible, setIsVisible] = useState(false);
   return (
     <Form
       className="flex w-96 flex-col gap-4"
@@ -27,7 +28,27 @@ export default function SignIn() {
     >
       <Input name="email" type="email" placeholder="Email" />
 
-      <Input name="password" type="password" placeholder="Password" />
+      <TextField className="w-full " name="password">
+      <Label>Password</Label>
+      <InputGroup>
+        <InputGroup.Input
+          className="w-full "
+          type={isVisible ? "text" : "password"}
+          
+        />
+        <InputGroup.Suffix className="pe-0">
+          <Button
+            isIconOnly
+            aria-label={isVisible ? "Hide password" : "Show password"}
+            size="sm"
+            variant="ghost"
+            onPress={() => setIsVisible(!isVisible)}
+          >
+            {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
+          </Button>
+        </InputGroup.Suffix>
+      </InputGroup>
+    </TextField>
 
       <Button type="submit">Sign In</Button>
     </Form>
