@@ -1,5 +1,5 @@
 "use client";
-import {Eye, EyeSlash} from "@gravity-ui/icons";
+import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { signIn } from "../../../lib/auth-client";
 // import {Check} from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
@@ -17,10 +17,15 @@ export default function SignIn() {
       rememberMe: true,
       callbackURL: "/", // An optional URL to redirect to after the user signs up.
     });
-    console.log(resData,error)
+    console.log(resData, error)
   };
-const [isVisible, setIsVisible] = useState(false);
-  return (
+  const handleGoogleSignIn = async () => {
+    const resData = await signIn.social({
+      provider: "google",
+    });
+  }
+  const [isVisible, setIsVisible] = useState(false);
+  return (<>
     <Form
       className="flex w-96 flex-col gap-4"
       // render={(props) => <form {...props} data-custom="foo" />}
@@ -29,28 +34,31 @@ const [isVisible, setIsVisible] = useState(false);
       <Input name="email" type="email" placeholder="Email" />
 
       <TextField className="w-full " name="password">
-      <Label>Password</Label>
-      <InputGroup>
-        <InputGroup.Input
-          className="w-full "
-          type={isVisible ? "text" : "password"}
-          
-        />
-        <InputGroup.Suffix className="pe-0">
-          <Button
-            isIconOnly
-            aria-label={isVisible ? "Hide password" : "Show password"}
-            size="sm"
-            variant="ghost"
-            onPress={() => setIsVisible(!isVisible)}
-          >
-            {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
-          </Button>
-        </InputGroup.Suffix>
-      </InputGroup>
-    </TextField>
+        <Label>Password</Label>
+        <InputGroup>
+          <InputGroup.Input
+            className="w-full "
+            type={isVisible ? "text" : "password"}
+
+          />
+          <InputGroup.Suffix className="pe-0">
+            <Button
+              isIconOnly
+              aria-label={isVisible ? "Hide password" : "Show password"}
+              size="sm"
+              variant="ghost"
+              onPress={() => setIsVisible(!isVisible)}
+            >
+              {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
+            </Button>
+          </InputGroup.Suffix>
+        </InputGroup>
+      </TextField>
 
       <Button type="submit">Sign In</Button>
     </Form>
+    <p>Or</p>
+    <Button onClick={()=>handleGoogleSignIn()} >Sign in with Google</Button>
+    </>
   );
 }
