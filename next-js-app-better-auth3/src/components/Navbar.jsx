@@ -15,11 +15,12 @@ export default function Navbar() {
         <li>
             <Link href="/">Home</Link>
         </li>
+        <Link href="/dashboard" className="font-medium text-accent" aria-current="page">
+            Dashboard
+        </Link>
         {
             session ? <> <li>
-                <Link href="/dashboard" className="font-medium text-accent" aria-current="page">
-                    Dashboard
-                </Link>
+
             </li>
                 <li>
                     <Link href="/profile">Profile</Link>
