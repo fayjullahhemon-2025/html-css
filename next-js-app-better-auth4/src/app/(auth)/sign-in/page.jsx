@@ -1,25 +1,26 @@
 "use client";
 
 
-import { signUp,signIn } from "../../../lib/auth-client";
+import { signUp, signIn } from "../../../lib/auth-client";
 import { Button, Form, Input, Label, TextField } from "@heroui/react";
 
 export default function SignIn() {
-    const onSubmit = async(e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
         console.log(data)
-        const { data:resData, error } = await signIn.email({
+        const { data: resData, error } = await signIn.email({
             email: data.email,
             password: data.password,
+            callbackURL: "/"
         });
-        console.log(resData,error)
+        console.log(resData, error)
     };
 
     return (
         <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
-            
+
 
             <TextField
                 isRequired
