@@ -1,36 +1,51 @@
 'use client'
 import { useState } from "react";
 import { Link, Button, Spinner } from "@heroui/react";
-import { useSession,signOut } from "@/lib/auth-client";
+import { useSession, signOut } from "@/lib/auth-client";
 // import { signOut } from "better-auth/api";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { data: session ,isPending} = useSession()
+    const { data: session, isPending } = useSession()
     console.log(session?.user?.name)
-    if(isPending){
+    if (isPending) {
         return <>Loading...</>
     }
+    const links = <>
+        <li>
+            <Link href="/">Home</Link>
+        </li>
+        {
+            session ? <> <li>
+                <Link href="/dashboard" className="font-medium text-accent" aria-current="page">
+                    Dashboard
+                </Link>
+            </li>
+                <li>
+                    <Link href="/profile">Profile</Link>
+                </li> </> : ""
+        }
+    </>
     const authLinks = <>
         {
-            session ? <> <span> {session?.user?.name} </span> 
-            <Link href="/sign-in" className="block py-2">
-                <Button onClick={()=>signOut() } >Sign Out</Button>
-            </Link>
-                
-            </>:<> <Link href="/sign-in" className="block py-2">
+            session ? <> <span> {session?.user?.name} </span>
+                <Link href="/sign-in" className="block py-2">
+                    <Button onClick={() => signOut()} >Sign Out</Button>
+                </Link>
+
+            </> : <> <Link href="/sign-in" className="block py-2">
                 Login
             </Link>
-            <Link href="/sign-up" className="block py-2">
-                <Button className="w-full">Sign Up</Button>
-            </Link>
-            
+                <Link href="/sign-up" className="block py-2">
+                    <Button className="w-full">Sign Up</Button>
+                </Link>
+
             </>
         }
-        
-        
+
+
     </>
-    
+
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
             <header className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
@@ -71,17 +86,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <ul className="hidden items-center gap-4 md:flex">
-                    <li>
-                        <Link href="#">Features</Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="font-medium text-accent" aria-current="page">
-                            Dashboard
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#">Pricing</Link>
-                    </li>
+                    {links}
                 </ul>
                 <div className="hidden items-center gap-4 md:flex">
                     {authLinks}
@@ -90,21 +95,7 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div className="border-t border-separator md:hidden">
                     <ul className="flex flex-col gap-2 p-4">
-                        <li>
-                            <Link href="#" className="block py-2">
-                                Features
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="block py-2 font-medium text-accent">
-                                Dashboard
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="block py-2">
-                                Pricing
-                            </Link>
-                        </li>
+                        {links}
                         <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
                             {authLinks}
                         </li>
