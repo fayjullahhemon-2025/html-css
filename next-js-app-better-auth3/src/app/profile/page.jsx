@@ -2,6 +2,8 @@
 
 import { updateUser } from "@/lib/auth-client";
 import {FloppyDisk} from "@gravity-ui/icons";
+
+import {HardDrive, Persons} from "@gravity-ui/icons";
 import {
   Button,
   Description,
@@ -13,6 +15,7 @@ import {
   Label,
   TextArea,
   TextField,
+  toast
 } from "@heroui/react";
 
 export default function profileUpdate() {
@@ -51,10 +54,26 @@ export default function profileUpdate() {
           
         </FieldGroup>
         <Fieldset.Actions>
-          <Button type="submit">
+          
+          <Button type="submit"
+          className="text-success-soft-foreground"
+          size="sm"
+          variant="tertiary"
+          onPress={() => {
+            const id = toast.success("You have upgraded your plan", {
+              actionProps: {
+                children: "Billing",
+                className: "bg-success text-success-foreground",
+                onPress: () => toast.close(id),
+              },
+              description: "You can continue using HeroUI Chat",
+            });
+            console.log("id",id)
+          }}
+        >
             <FloppyDisk />
-            Save changes
-          </Button>
+          Save changes
+        </Button>
           <Button type="reset" variant="secondary">
             Cancel
           </Button>
