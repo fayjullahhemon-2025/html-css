@@ -16,9 +16,14 @@ export default function SignIn() {
             callbackURL: "/"
         });
         console.log(resData, error)
-    };
 
-    return (
+    };
+    const handleGithubSignIn = async () => {
+        const data = await signIn.social({
+            provider: "github"
+        })
+    }
+    return (<>
         <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
 
 
@@ -53,5 +58,8 @@ export default function SignIn() {
                 </Button>
             </div>
         </Form>
+        <p>Or</p>
+        <Button onClick={handleGithubSignIn} >Github</Button>
+    </>
     );
 }

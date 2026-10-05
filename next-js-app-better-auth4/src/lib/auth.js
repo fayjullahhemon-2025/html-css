@@ -20,13 +20,20 @@ export const auth = betterAuth({
                 subject: 'Verify your email address',
                 html: `Click <a href="${url}">here</a> to verify your email.`,
             });
-            
+
         },
         sendOnSignUp: true,
-		autoSignInAfterVerification: true,
-		expiresIn: 3600 // 1 hour
-        
+        autoSignInAfterVerification: true,
+        expiresIn: 3600 // 1 hour
+
     },
+    socialProviders: {
+        github: {
+            clientId: process.env.BETTER_AUTH_GITHUB_CLIENT,
+            clientSecret: process.env.BETTER_AUTH_GITHUB_SECRET,
+        },
+    },
+
     database: mongodbAdapter(db, {
         client,
     }),
