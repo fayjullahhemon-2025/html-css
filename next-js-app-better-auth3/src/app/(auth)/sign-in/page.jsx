@@ -29,6 +29,11 @@ export default function SignIn() {
       provider:'github'
     })
   }
+  const handleDiscordSignIn = async()=>{
+    const resData = await signIn.social({
+      provider:'discord'
+    })
+  }
   const [isVisible, setIsVisible] = useState(false);
   return (<>
     <Form
@@ -65,6 +70,7 @@ export default function SignIn() {
     <p>Or</p>
     <Button onClick={()=>handleGoogleSignIn()} >Sign in with Google</Button>
     <Button onClick={()=>handleGithubSignIn()} >Sign in with Github</Button>
+    <Button onClick={()=>handleDiscordSignIn()} >Sign in with Discord</Button>
     </>
   );
 }

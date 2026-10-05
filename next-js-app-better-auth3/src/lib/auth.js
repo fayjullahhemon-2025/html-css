@@ -18,6 +18,10 @@ export const auth = betterAuth({
             clientId: process.env.BETTER_AUTH_GITHUB_CLIENT_ID, 
             clientSecret: process.env.BETTER_AUTH_GITHUB_SECRET, 
         },
+        discord: { 
+            clientId: process.env.BETTER_AUTH_DISCORD_CLIENT_ID, 
+            clientSecret: process.env.BETTER_AUTH_DISCORD_SECRET, 
+        }, 
     },
     database: mongodbAdapter(db, {
         client,
