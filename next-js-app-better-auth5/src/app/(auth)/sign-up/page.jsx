@@ -2,24 +2,33 @@
 
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { signUp } from "../../../../lib/auth-client";
 
 export default function Basic() {
-    const onSubmit = (e) => {
+    const onSubmit = async(e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-
+        const data = Object.fromEntries(formData.entries());
+        console.log(data);
+        const { data:resData, error } = await signUp.email({
+            name: data.name, // required, The name of the user.
+            email: data.email, // required, The email address of the user.
+            password: data.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
+            callbackURL: "/", // An optional URL to redirect to after the user signs up.
+        });
+        console.log(resData,error)
     };
 
     return (
         <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
             <TextField
-            name="name"
-            
-          >
-            <Label>Name</Label>
-            <Input placeholder="John Doe" />
-            
-          </TextField>
+                name="name"
+
+            >
+                <Label>Name</Label>
+                <Input placeholder="John Doe" />
+
+            </TextField>
             <TextField
 
                 name="email"
