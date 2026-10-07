@@ -1,9 +1,17 @@
 'use client'
 import { useState } from "react";
 import { Link, Button } from "@heroui/react";
+import { useSession,signOut } from "../../lib/auth-client";
+
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { data: session ,isPending} = useSession();
+    console.log(session)
+    if(isPending){
+        return <><div className="flex justify-center items-center" >Loading...</div></>
+    }
+
     const links =
         <>
             <li>
@@ -14,16 +22,25 @@ export default function Navbar() {
                     Dashboard
                 </Link>
             </li>
-            <li>
+            {
+                session?.user ? <li>
                 <Link href="/profile">Profile</Link>
-            </li>
+            </li> : ''
+            }
         </>
     const auth_links =
         <>
-            <Link href="#" className="block py-2">
-                Login
-            </Link>
-            <Button className="w-full">Sign Up</Button>
+            {
+                session?.user ? <>{session?.user?.name} <Link href='/sign-in' >
+                <Button onClick={()=>signOut()} >Sign out</Button>
+                </Link> </> : <><Link href="sign-in" className="block py-2">
+                    Login
+                </Link>
+                <Link href="/sign-up" className="block py-2">
+                    <Button className="w-full">Sign Up</Button>
+                </Link>
+                    </>
+            }
         </>
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
