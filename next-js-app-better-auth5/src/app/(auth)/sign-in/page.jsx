@@ -27,6 +27,11 @@ export default function SignIn() {
             provider: "google",
         });
     };
+    const HandleGithubLogin = async () => {
+        const data = await signIn.social({
+            provider: "github",
+        });
+    };
 
     return (<>
         <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
@@ -89,7 +94,8 @@ export default function SignIn() {
             </div>
         </Form>
         <p>Or</p>
-        <Button onClick={HandleGoogleLogin} >Google</Button>
+        <Button onClick={HandleGoogleLogin} >Google</Button> 
+        <Button onClick={HandleGithubLogin} >Github</Button>
     </>
     );
 }
