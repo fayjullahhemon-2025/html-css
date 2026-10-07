@@ -20,9 +20,15 @@ export default function SignIn() {
             callbackURL: "/"
         });
         console.log(resData, error);
+
+    };
+    const HandleGoogleLogin = async () => {
+        const data = await signIn.social({
+            provider: "google",
+        });
     };
 
-    return (
+    return (<>
         <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
             <TextField
                 isRequired
@@ -70,7 +76,7 @@ export default function SignIn() {
                 <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                 <FieldError />
             </TextField>
-            
+
 
             <div className="flex gap-2">
                 <Button type="submit">
@@ -82,5 +88,8 @@ export default function SignIn() {
                 </Button>
             </div>
         </Form>
+        <p>Or</p>
+        <Button onClick={HandleGoogleLogin} >Google</Button>
+    </>
     );
 }
