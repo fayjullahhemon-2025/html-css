@@ -4,6 +4,7 @@ import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField, InputGroup } from "@heroui/react";
 import { signIn } from "../../../../lib/auth-client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function SignIn() {
     const [isVisible, setIsVisible] = useState(false);
@@ -102,6 +103,7 @@ export default function SignIn() {
         <Button onClick={HandleGoogleLogin} >Google</Button> 
         <Button onClick={HandleGithubLogin} >Github</Button>
         <Button onClick={HandleDiscordLogin} >Discord</Button>
+        <p>Forgot password? <Link href='/forgot-password' className="underline text-blue-500" >Click here</Link> </p>
     </>
     );
 }
