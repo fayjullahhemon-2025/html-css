@@ -14,38 +14,36 @@ import {
     TextArea,
     TextField, InputGroup
 } from "@heroui/react";
-import { signIn } from "@/lib/auth-client";
+import { resetPassword, signIn } from "@/lib/auth-client";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-export default function SignIn() {
+export default function ResetPassword() {
+    const searchParams = useSearchParams()
+    const token = searchParams.get('token')
     const [isVisible, setIsVisible] = useState(false);
     const onSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
-        const { data: resData, error } = await signIn.email({
-            email: data.email, // required, The email address of the user.
-            password: data.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
-            rememberMe: true, // If false, the user will be signed out when the browser is closed. (optional) (default: true)
-            callbackURL: "/", // An optional URL to redirect to after the user signs in. (optional)
+        console.log(data);
+
+        console.log(token)
+        const { data:resData, error } = await resetPassword({
+            newPassword: data.password, // required, The new password to set
+            token, // required, The token to reset the password
         });
-        console.log(resData, error)
+        console.log(resData)
     };
 
     return (
         <>
             <Form className="w-full max-w-96" onSubmit={onSubmit}>
                 <Fieldset>
-                    <Fieldset.Legend>Sign In</Fieldset.Legend>
+                    <Fieldset.Legend>Reset Password</Fieldset.Legend>
                     <Description></Description>
                     <FieldGroup>
 
-
-                        <TextField isRequired name="email" type="email">
-                            <Label>Email</Label>
-                            <Input placeholder="john@example.com" />
-                            <FieldError />
-                        </TextField>
                         <TextField className="w-full "
                             isRequired
                             minLength={8}
@@ -98,7 +96,7 @@ export default function SignIn() {
                     </Fieldset.Actions>
                 </Fieldset>
             </Form>
-            <p>Forgot Password? <Link href='/forgot-password' className='text-blue-400 underline' >Click here</Link> </p>
+            {/* <p>Forgot Password? <Link href='/forgot-password' className='text-blue-400 underline' >Click here</Link> </p> */}
         </>
     );
 }
