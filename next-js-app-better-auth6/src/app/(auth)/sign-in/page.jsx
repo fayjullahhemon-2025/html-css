@@ -12,15 +12,23 @@ import {
     Input,
     Label,
     TextArea,
-    TextField,InputGroup
+    TextField, InputGroup
 } from "@heroui/react";
+import { signIn } from "@/lib/auth-client";
 
 export default function SignIn() {
     const [isVisible, setIsVisible] = useState(false);
-    const onSubmit = (e) => {
+    const onSubmit = async(e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-
+        const data = Object.fromEntries(formData.entries());
+        const { data:resData, error } = await signIn.email({
+            email: data.email, // required, The email address of the user.
+            password: data.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
+            rememberMe: true, // If false, the user will be signed out when the browser is closed. (optional) (default: true)
+            callbackURL: "/", // An optional URL to redirect to after the user signs in. (optional)
+        });
+        console.log(resData,error)
     };
 
     return (
@@ -29,7 +37,7 @@ export default function SignIn() {
                 <Fieldset.Legend>Sign In</Fieldset.Legend>
                 <Description></Description>
                 <FieldGroup>
-                    
+
 
                     <TextField isRequired name="email" type="email">
                         <Label>Email</Label>

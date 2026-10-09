@@ -1,9 +1,11 @@
 'use client'
 import { useState } from "react";
 import { Link, Button } from "@heroui/react";
+import { signOut, useSession } from "@/lib/auth-client";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { data: session, isPending } = useSession();
     const links =
         <>
             <li>
@@ -16,20 +18,51 @@ export default function Navbar() {
                     Dashboard
                 </Link>
             </li>
-            <li>
-                <Link href="/profile" className="block py-2">
-                    Profile
-                </Link>
-            </li>
+            {
+                session?.user ?
+                    <>
+                        <li>
+                            <Link href="/profile" className="block py-2">
+                                Profile
+                            </Link>
+                        </li>
+                    </>
+                    :
+                    <>
+
+                    </>
+            }
         </>
     const auth_links =
         <>
-            <Link href="#" className="block py-2">
-                Login
-            </Link>
-            <Link href="#" className="block py-2">
-                <Button className="w-full">Sign Up</Button>
-            </Link>
+            {
+                session?.user ?
+                    <>
+                        <span>{session?.user?.name}</span>
+                        
+                        <Button onClick = {()=>signOut()}>Sign Out</Button>
+                        
+                    </>
+
+                    : 
+                    <>
+                        <li>
+                            <Link href="/sign-in" className="block py-2">
+                            <Button >Login</Button>
+                                
+                            </Link>
+                            
+                        </li>
+                        <li>
+                           
+                            <Link href="/sign-up" className="block py-2">
+                            <Button >Sign Up</Button>
+                                
+                            </Link>
+                            
+                        </li>
+                    </>
+            }
         </>
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
