@@ -25,7 +25,7 @@ export default async function MainNewsSection() {
     return (
         <div className="flex justify-between items-start gap-1.5 my-5" >
             <div>
-                <FirstMainNewsCard firstNews={firstNews} ></FirstMainNewsCard>
+                <FirstMainNewsCard news={firstNews} ></FirstMainNewsCard>
             </div>
             <div className="flex flex-col justify-center px-5 py-5" >
 
