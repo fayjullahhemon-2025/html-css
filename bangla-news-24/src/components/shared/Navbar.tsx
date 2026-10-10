@@ -29,7 +29,7 @@ export default async function Navbar() {
                 {navItems.data.filter((item:NavType) => item.scrapable).map((item:NavType, idx:number) => (
                     <li key={idx}>
                         <Link
-                            href={item.slug}
+                            href={`/category/${item.slug}`}
                             className="text-base font-medium text-gray-700 transition-colors hover:text-red-600"
                         >
                             {item.title}
