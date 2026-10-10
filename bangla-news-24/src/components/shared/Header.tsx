@@ -7,6 +7,7 @@ import { Suspense } from 'react'
 import Marquee from './marquee'
 import { signOut, useSession } from '@/lib/auth-client'
 import AuthBtn from './AuthBtn'
+import Header1 from './Header1'
 
 export default async function Header() {
 
@@ -18,6 +19,7 @@ export default async function Header() {
 
     return (
         <header className="w-full bg-white">
+            {/* <Header1></Header1> */}
             <div className="mx-auto max-w-7xl px-4">
                 {/* Top section */}
                 <div className="flex items-center justify-between py-4">

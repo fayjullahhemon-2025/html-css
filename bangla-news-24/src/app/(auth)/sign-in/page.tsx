@@ -26,6 +26,12 @@ export default function SignIn() {
             provider: "google",
         })
     }
+    const githubSignIn = async () => {
+        const data = await signIn.social({
+            provider: "github",
+        })
+    }
+
     return (
         <>
             <form onSubmit={onSubmit} >
@@ -42,7 +48,10 @@ export default function SignIn() {
                 </fieldset>
             </form>
             <p>Or</p>
-            <button onClick={googleSignIn} className='btn-accent'>Google</button>
+            <div className="flex justify-center items-center gap-2" >
+                <button onClick={googleSignIn} className='btn-accent'>Google</button>
+                <button onClick={githubSignIn} className='btn-accent'>Github</button>
+            </div>
         </>
     );
 }
