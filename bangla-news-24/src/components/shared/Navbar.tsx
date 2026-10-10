@@ -1,30 +1,42 @@
+import { NavType } from "@/types/types";
+import Link from "next/link";
 
-const navItems = [
-  "হোম",
-  "রাজনীতি",
-  "বিশ্ব",
-  "অর্থনীতি",
-  "স্বাস্থ্য",
-  "খেলা",
-  "প্রযুক্তি",
-  "দেশজুড়ে",
-];
+const navlinks = async () => {
+    try {
+        const res = await fetch('https://news-api-v2.vercel.app/api/categories');
+        if (!res.ok) {
+            throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
 
-export default function Navbar() {
-  return (
-    <nav className="w-full bg-white px-4 py-3">
-      <ul className="flex items-center gap-6 overflow-x-auto whitespace-nowrap">
-        {navItems.map((item) => (
-          <li key={item}>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-700 transition-colors hover:text-red-600"
-            >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+    } catch (error) {
+        throw new Error(`Failed to fetch nav data`);
+    } finally {
+        console.log('fetched nav data successfull')
+    }
+}
+
+export default async function Navbar() {
+    const navItems = await navlinks();
+    console.log(navItems.data)
+    const navLinks:NavType[] = navItems.data;
+    return (
+        <nav className="w-full bg-white px-4 py-3">
+            <ul className="flex items-center gap-6 overflow-x-auto whitespace-nowrap">
+                <li>
+                    <Link href='/' className="text-base font-medium text-gray-700 transition-colors hover:text-red-600" >হোম</Link>
+                </li>
+                {navItems.data.filter((item:NavType) => item.scrapable).map((item:NavType, idx:number) => (
+                    <li key={idx}>
+                        <Link
+                            href={item.slug}
+                            className="text-base font-medium text-gray-700 transition-colors hover:text-red-600"
+                        >
+                            {item.title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    );
 }

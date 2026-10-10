@@ -3,6 +3,7 @@ import Logo from '@/app/assets/logo.png'
 import Image from 'next/image'
 import DateComponent from './Date'
 import Navbar from './Navbar'
+import { Suspense } from 'react'
 
 export default function Header() {
 
@@ -47,7 +48,9 @@ export default function Header() {
 
                 {/* Navbar */}
                 <div className="flex justify-center pb-3 ">
-                    <Navbar />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Navbar />
+                    </Suspense>
                 </div>
             </div>
         </header>
