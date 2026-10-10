@@ -11,7 +11,7 @@ const mainNews = async () => {
     } catch (error) {
         throw new Error(`Http Error `)
     } finally {
-        console.log('News fetched successfully');
+        // console.log('News fetched successfully');
     }
 }
 

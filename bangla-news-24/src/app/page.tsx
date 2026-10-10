@@ -1,4 +1,5 @@
 import MainNewsSection from "@/components/Homepage/MainNewsSection";
+import MostReadSection from "@/components/Homepage/MostReadSection";
 import OtherSection from "@/components/Homepage/OtherSection";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -17,7 +18,11 @@ export default async function Home() {
           </Suspense>
 
         </div>
-        <div className="col-span-1 bg-green-400 p-10"></div>
+        <div className="col-span-1 p-10">
+          <Suspense>
+            <MostReadSection></MostReadSection>
+          </Suspense>
+        </div>
       </div>
     </div>
   );

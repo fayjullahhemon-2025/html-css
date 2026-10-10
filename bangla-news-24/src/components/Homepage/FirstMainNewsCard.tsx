@@ -4,7 +4,7 @@ interface FirstMainNewsCardType {
     news: HeadingTypes;
 }
 export default function FirstMainNewsCard({ news }: FirstMainNewsCardType) {
-    console.log(news)
+    // console.log(news)
     return (
         <div>
             <div className="card bg-base-100 w-full max-w-sm sm:max-w-md md:max-w-lg shadow-sm mx-auto overflow-hidden">

@@ -12,7 +12,7 @@ const getNews = async () => {
     } catch (error) {
         throw new Error('Failed to fetch data');
     } finally {
-        console.log('Data fetched  successfully')
+        // console.log('Data fetched  successfully')
     }
 }
 export default async function OtherSection() {
@@ -29,7 +29,7 @@ export default async function OtherSection() {
     const videoNews: HeadingTypes[] = data.data[8].articles;
     const othersNews: HeadingTypes[] = data.data[9].articles;
     // console.log("Selected news",selectedNews)
-    console.log("BD news", bdNews)
+    // console.log("BD news", bdNews)
     return (
         <div>
             <h1 className="border-b-2 border-red-500 mb-2" >নির্বাচিত খবর</h1>
