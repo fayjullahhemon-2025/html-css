@@ -6,24 +6,28 @@ import { signIn } from "@/lib/auth-client";
 
 
 export default function SignIn() {
-    const onSubmit = async(e:React.SubmitEvent<HTMLFormElement>)=>{
+    const onSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries()) as {
-            email:string,
-            password:string
+            email: string,
+            password: string
         };
         console.log(data);
-        const {data:resData,error} = await signIn.email({
-            email:data.email,
-            password:data.password,
-            rememberMe:true,
-            callbackURL:"/"
+        const { data: resData, error } = await signIn.email({
+            email: data.email,
+            password: data.password,
+            rememberMe: true,
+            callbackURL: "/"
         })
     }
-
+    const googleSignIn = async () => {
+        const data = await signIn.social({
+            provider: "google",
+        })
+    }
     return (
-
+        <>
             <form onSubmit={onSubmit} >
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 max-w-7xl mx-auto my-5">
                     <legend className="fieldset-legend">Sign Up</legend>
@@ -37,6 +41,8 @@ export default function SignIn() {
                     <button type='submit' className="btn btn-neutral mt-4">Sign In</button>
                 </fieldset>
             </form>
-
+            <p>Or</p>
+            <button onClick={googleSignIn} className='btn-accent'>Google</button>
+        </>
     );
 }
