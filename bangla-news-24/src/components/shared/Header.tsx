@@ -4,6 +4,7 @@ import Image from 'next/image'
 import DateComponent from './Date'
 import Navbar from './Navbar'
 import { Suspense } from 'react'
+import Marquee from './marquee'
 
 export default function Header() {
 
@@ -53,6 +54,9 @@ export default function Header() {
                     </Suspense>
                 </div>
             </div>
+            <Suspense fallback={<div>Loading..</div>} >
+                <Marquee></Marquee>
+            </Suspense>
         </header>
     )
 }
