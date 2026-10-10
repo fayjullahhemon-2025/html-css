@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import { Suspense } from "react";
 // import Marquee from "@/components/shared/marquee";
 // import { Suspense } from "react";
 
@@ -24,7 +25,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${NotoSerifBengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header></Header>
+        <Suspense>
+          <Header></Header>
+        </Suspense>
         
         {children}
       </body>

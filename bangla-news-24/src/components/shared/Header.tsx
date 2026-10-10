@@ -1,13 +1,20 @@
-
+// 'use client'
 import Logo from '@/app/assets/logo.png'
 import Image from 'next/image'
 import DateComponent from './Date'
 import Navbar from './Navbar'
 import { Suspense } from 'react'
 import Marquee from './marquee'
+import { signOut, useSession } from '@/lib/auth-client'
+import AuthBtn from './AuthBtn'
 
-export default function Header() {
+export default async function Header() {
 
+    // const { data: session } = await useSession();
+    // console.log(session)
+    const auth_links = 
+        <AuthBtn></AuthBtn>
+    
 
     return (
         <header className="w-full bg-white">
@@ -37,13 +44,7 @@ export default function Header() {
 
                     {/* Auth buttons */}
                     <div className="flex items-center gap-3">
-                        <button className="rounded-md px-3 py-2 text-sm text-gray-700 hover:text-red-600">
-                            সাইন ইন
-                        </button>
-
-                        <button className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">
-                            সাইন আপ
-                        </button>
+                        {auth_links}
                     </div>
                 </div>
 
